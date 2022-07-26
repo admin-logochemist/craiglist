@@ -1,12 +1,9 @@
 .sidebar{
-    height:calc(100vh - -25px);
+    height:calc(100vh - 50px);
     position: sticky ;
    background-color: #235789 !important;
     top: 0px;
     border-radius: 6px;
-    margin-top: 2px;
-    -webkit-box-shadow:0px 0px 11px -1px #000000 ;
-    box-shadow:0px 0px 11px -1px #000000 ;
     }   
 .newSidebar{
    
@@ -17,7 +14,7 @@
 .sidebarWrapper{
     padding: 20px;
     color: #555;
-
+    margin-top: 2px;
 
 }
 
@@ -27,8 +24,7 @@
 
 .sidebarTitle{
     font-size: 16px;
-    color: rgb(167, 223, 255);
-    font-weight: 600;
+    color: rgb(0, 0, 0);
 }
 
 .sidebarList{
@@ -41,12 +37,11 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    border-radius: 10px; 
     color: white;
+    border-radius: 10px;
 }
 .sidebarListitem.active, .sidebarListitem:hover{
     background-color: rgb(166, 166, 197);
-    color:white;
 
 }
 
@@ -59,29 +54,9 @@
 .sidebarMenuIcon{
     margin-right: 5px;
     font-size: 30px !important;
-    z-index: -1 !important ;
-    background-color: "red";
-    margin-bottom: 50px;
-    color: white;
-    /* visibility: hidden; */
+    background-color: "red";margin-bottom: 50px;
 
 }
-
-#MenuBARIcon{
-    height:30px;
-   background-color: #235789 !important;
-    
-}
-
-.sidebarListitem a{
-    text-decoration: none;
-    color: white;
-
-}
-.sidebarListitem a:hover{
-    color: white;
-}
-
 
 @media screen and (max-width:1400px) {
     .sidebar{
@@ -92,31 +67,14 @@
         float: left;
     }
 }
-@media screen and (max-width:992px) {
+@media screen and (max-width:576px) {
     .sidebar{
-        position: relative;
+        position: absolute;
+        top: 80px;
+        visibility: hidden;
     }
     .sidebarMenuIcon{
         visibility: visible;
         float: left;
     }
-}
-
-@media screen and (max-width:992px) {
-    .sidebar{
-        height: calc(100vh - -30px );
-        height: calc(100vh - -30px );
-    position: absolute;
-    top: 87px;
-    z-index: 999;
-
-
-
-    }
-    .sidebarMenuIcon{
-        visibility: visible;
-        float: left;
-    }
-    
-    
 }

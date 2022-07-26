@@ -7,7 +7,7 @@ import CheckoutPro from './CheckoutPro'
 import { selectItems, selectTotal } from '../components/features/BasketSlice';
 import { useSelector } from 'react-redux'
 import HeaderStore from '../components/component/HeaderStore';
-import { Elements } from '@stripe/react-stripe-js';
+// import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import axios from 'axios';
 function CheckOut() {

@@ -5,8 +5,8 @@
 }
 
 .FeaturedItem{
+    margin: 3px;
     flex: 1;
-    margin: 0px 20px;
     padding: 30px;
     border-radius: 10px;
     cursor: pointer;
@@ -42,4 +42,12 @@
 .FeaturedSub{
     font-size: 15px;
     color: gray;
+}
+
+@media screen and (max-width:992px) {
+    .Featured{
+        display: block !important;
+        
+    }
+    
 }

@@ -1,8 +1,11 @@
-.home{
-    flex: 4;
-    margin-top: 10px;
+#home{
+    
 }
-.homeWidgets{
+#homeWidgets{
     display: flex;
-    margin: 20px;
+    margin-top: 5px;
+}
+#Chart{
+    margin-top: 5px;
+
 }

@@ -492,3 +492,22 @@ justify-content: center;
 .storeAddProduct{
     
 }
+.logoutbtn{
+    color:rgb(0, 0, 0);
+    border:#235789 solid 2px;
+    height: 30px;
+    background-color: aliceblue;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+.a_1{
+   
+    text-align: center;
+    color: red;
+    text-transform: capitalize;
+    font-weight: 800;
+    font-size: 20px;
+
+}

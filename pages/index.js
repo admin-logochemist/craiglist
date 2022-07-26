@@ -180,9 +180,9 @@ const handleSubmit = () => {
                 <input onChange={(e) => setSearchPost(e.target.value)} value={searchPost} type="text" placeholder='Search' className={styles.homesidebar} />
                  <button onClick={handleSubmit}><FontAwesomeIcon icon={faSearch} /></button>
               </span>
-              <span id={styles.form_input}>
+             {/* <span id={styles.form_input}>
               <a href="/Store">Store</a>
-              </span>
+        </span> */}
               <br />
             </span> 
             <span>
@@ -842,7 +842,7 @@ const handleSubmit = () => {
           </div>
         </div>
       </div>
-      <div className="container" id={styles.footer}>  
+      <div className="container-fluid" id={styles.footer}>  
         <div className={styles.footer_home}>
           <ul className={styles.clfooter_home}>
             <li>© 2022  <span className={styles.desktop}>weblisted </span><span className={styles.mobile}>WL</span></li>&nbsp;&nbsp;

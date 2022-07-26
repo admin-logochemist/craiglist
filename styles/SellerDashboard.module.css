@@ -1,7 +1,8 @@
 .Topbar{
     width: 100%;
     height: 50px;
-    background-color: white;
+    background-color: #235789 !important;
+
     position: sticky;
     top: 0;
     z-index: 999;
@@ -18,14 +19,14 @@
 .Logo{
     font-weight: bold;
     font-size: 30px;
-    color: darkblue;
+    color: rgb(250, 250, 250);
     cursor: pointer;
 }
 .topbarIconContainer{
     position: relative;
     cursor: pointer;
     margin-right: 10px;
-    color: #555;
+    color: #fff;
 }
 .topIconBag{
     width: 15px;
@@ -54,4 +55,8 @@
 
 #container{
     display:flex;
+}
+
+@media screen and (min-width:992px) {
+    
 }

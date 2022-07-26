@@ -22,10 +22,11 @@ import {
   Menu
 } from '@material-ui/icons'
 import stylesMenu from '../../styles/sidebar.module.css'
+import DashboardProductAddForm from '../../components/component/DashboardProductAddForm/DashboardProductAddForm'
 
 
 
-function SellerDashboard() {
+function ProductAddPage() {
   const [on, setOn] = useState(true);
   return (
     <div>
@@ -45,7 +46,7 @@ function SellerDashboard() {
                 <Sidebar />
               </div>
               <div className="col-lg-9 col-md-9 col-sm-9" >
-                <Home />
+                <DashboardProductAddForm/>
               </div>
             </div>
             :
@@ -64,4 +65,4 @@ function SellerDashboard() {
   )
 }
 
-export default SellerDashboard
+export default ProductAddPage

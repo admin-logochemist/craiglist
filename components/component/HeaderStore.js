@@ -3,7 +3,7 @@ import styles from '../../styles/store.module.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+// import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { useSelector,useDispatch } from 'react-redux';
 import { selectItems } from '../features/BasketSlice';
 import { useRouter } from 'next/router';
@@ -56,7 +56,7 @@ const signOut=()=>{
                         <span onClick={()=>route.push('/CheckOut')} ><FontAwesomeIcon icon={faCartShopping} className={styles.iconCart} /> </span>
                         
                         </span>
-                        <button><a href="/ProductAdd/ProductAdd">Add product</a></button>
+                        <button className={styles.logoutbtn}><a href="/ProductAdd/ProductAdd">Add product</a></button>
                         </div>
                         {items.length}
                        

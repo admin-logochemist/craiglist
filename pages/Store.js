@@ -63,7 +63,6 @@ function Store() {
                             <li>TRACK MY ORDER</li>
                         </ul>
                     </div>
-
                 </div>
 
             </div>
