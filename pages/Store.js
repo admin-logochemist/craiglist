@@ -9,41 +9,200 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import Carousel from 'react-bootstrap/Carousel';
 import ProductSale from '../components/component/ProductSale'
-import { collection, onSnapshot, orderBy, query,where } from 'firebase/firestore';
+import { collection, onSnapshot, orderBy, query, where } from 'firebase/firestore';
 import { db, storage } from '../firebase';
-import { useSelector,useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { selectItems } from '../components/features/BasketSlice';
 import Link from 'next/link'
+import ReactStars from 'react-stars'
 import HeaderStore from '../components/component/HeaderStore';
 function Store() {
-    const items=useSelector(selectItems);
-    const [product, setProduct] = useState([])
+    const items = useSelector(selectItems);
+    const [product, setProduct] = useState([]);
+
+    const objArr =
+        [
+            {
+                text: 'soap1',
+                image: 'image1',
+                content: "Some quick example text to build on the card title and make up the bulk of the cards content."
+            }
+            ,
+            {
+                text: 'rope2',
+                image: 'image2',
+                content: "Some quick example text to build on the card title and make up the bulk of the cards content."
+            }
+            ,
+            {
+                text: 'rope3',
+                image: 'image3',
+                content: "Some quick example text to build on the card title and make up the bulk of the cards content."
+            }
+            ,
+            {
+                text: 'rope4',
+                image: 'image4',
+                content: "Some quick example text to build on the card title and make up the bulk of the cards content."
+            }
+            ,
+            {
+                text: 'rope5',
+                image: 'image5',
+                content: "Some quick example text to build on the card title and make up the bulk of the cards content."
+            }
+            ,
+            {
+                text: 'rope6',
+                image: 'image2',
+                content: "Some quick example text to build on the card title and make up the bulk of the cards content."
+            }
+            ,
+            {
+                text: 'rope6',
+                image: 'image2',
+                content: "Some quick example text to build on the card title and make up the bulk of the cards content."
+            }
+            ,
+            {
+                text: 'rope6',
+                image: 'image2',
+                content: "Some quick example text to build on the card title and make up the bulk of the cards content."
+            }
+            ,
+            {
+                text: 'rope6',
+                image: 'image2',
+                content: "Some quick example text to build on the card title and make up the bulk of the cards content."
+            }
+            ,
+            {
+                text: 'rope6',
+                image: 'image2',
+                content: "Some quick example text to build on the card title and make up the bulk of the cards content."
+            }
+            ,
+            {
+                text: 'rope6',
+                image: 'image2',
+                content: "Some quick example text to build on the card title and make up the bulk of the cards content."
+            }
+            ,
+            {
+                text: 'rope6',
+                image: 'image2',
+                content: "Some quick example text to build on the card title and make up the bulk of the cards content."
+            }
+
+        ]
+
+    const objArrz =
+        [
+            {
+                text: 'mini bluethoot',
+                image: 'image1',
+                content: "Some quick example text to build on the card title and make up the bulk of the cards content."
+            }
+            ,
+            {
+                text: 'mini bluethoot',
+                image: 'image2',
+                content: "Some quick example text to build on the card title and make up the bulk of the cards content."
+            }
+            ,
+            {
+                text: 'mini bluethoot2',
+                image: 'image3',
+                content: "Some quick example text to build on the card title and make up the bulk of the cards content."
+            }
+            ,
+            {
+                text: 'mini bluethoot3',
+                image: 'image4',
+                content: "Some quick example text to build on the card title and make up the bulk of the cards content."
+            }
+            ,
+            {
+                text: 'mini bluethoot4',
+                image: 'image5',
+                content: "Some quick example text to build on the card title and make up the bulk of the cards content."
+            }
+            ,
+            {
+                text: 'mini bluethoot5',
+                image: 'image2',
+                content: "Some quick example text to build on the card title and make up the bulk of the cards content."
+            }
+
+
+        ]
+    const forSale =
+        [
+            {
+                text: 'Mini Hair  Straightener And Straightener | Mini Hair.. ',
+                image: 'image1',
+                content: "Some quick example text to build on the card title and make up the bulk of the cards content."
+            }
+            ,
+            {
+                text: 'Mini Hair  Straightener And Straightener | Mini Hair. 2',
+                image: 'image2',
+                content: "Some quick example text to build on the card title and make up the bulk of the cards content."
+            }
+            ,
+            {
+                text: 'Mini Hair  Straightener And Straightener | Mini Hair..3',
+                image: 'image3',
+                content: "Some quick example text to build on the card title and make up the bulk of the cards content."
+            }
+            ,
+            {
+                text: 'Mini Hair  Straightener And Straightener | Mini Hair..4',
+                image: 'image4',
+                content: "Some quick example text to build on the card title and make up the bulk of the cards content."
+            }
+            ,
+            {
+                text: 'Mini Hair  Straightener And Straightener | Mini Hair..5',
+                image: 'image5',
+                content: "Some quick example text to build on the card title and make up the bulk of the cards content."
+            }
+            ,
+            {
+                text: 'Mini Hair  Straightener And Straightener | Mini Hair..6',
+                image: 'image2',
+                content: "Some quick example text to build on the card title and make up the bulk of the cards content."
+            }
+
+
+        ]
 
     useEffect(() => {
-    getProduct()    
+        getProduct()
 
     }, [])
-   
-    const  renderProductSale = () => {
-       
-          return product.map((item, index) => {
+
+    const renderProductSale = () => {
+
+        return product.map((item, index) => {
             // eslint-disable-next-line react/jsx-key
             return <ProductSale
-              obj={item}
+                obj={item}
             />
-            
-          })
-        }
+
+        })
+    }
 
     const getProduct = () => {
-    
+
 
         onSnapshot(
-          query(collection(db,"addProduct"), where("category", "==", "gigOffered")), (snapshot)=>{setProduct(snapshot.docs)
-          console.log(snapshot.docs);
-          })
-      };
-   
+            query(collection(db, "addProduct"), where("category", "==", "gigOffered")), (snapshot) => {
+                setProduct(snapshot.docs)
+                console.log(snapshot.docs);
+            })
+    };
+
     return (
         <div className={styles.body}>
             <div className={styles.header00}>
@@ -66,8 +225,8 @@ function Store() {
                 </div>
 
             </div>
-            <HeaderStore/>
-    {/*        <div className="container">
+            <HeaderStore />
+            {/*        <div className="container">
                 <div className="row">
                     <div className='col-lg-12' id={styles.col12}>
                         <img src="/weblisted-store-logo.png" alt="" className={styles.storelogo} />
@@ -164,8 +323,8 @@ function Store() {
                     <div className="col-lg-12 col-md-12 col-sm-12 mt-5" id={styles.Mall}>
                         <h5>FLAT SALE</h5>
                         <div className={styles.mallborder}>
-                      {renderProductSale()}
-                  {/*Add Conts*/}
+                            {renderProductSale()}
+                            {/*Add Conts*/}
                         </div>
                     </div>
                 </div>
@@ -175,7 +334,13 @@ function Store() {
                     <div className="col-lg-12 col-md-12 col-sm-12 mt-5" id={styles.Mall}>
                         <h5>CRAIGLIST MALL</h5>
                         <div className={styles.mallborder}>
-                            <div className={styles.cart}>
+                            {objArrz.map((items, index) => (
+                                <div className={styles.cart}>
+                                    <img src="/cartpic.jpg" alt="" />
+                                    <span>{items.text}</span>
+                                    <span className={styles.text}>$:5</span>
+                                </div>))}
+                            {/* <div className={styles.cart}>
                                 <img src="/cartpic.jpg" alt="" />
                                 <span>mini bluethoot</span>
                                 <span className={styles.text}>$:5</span>
@@ -199,339 +364,105 @@ function Store() {
                                 <img src="/cartpic.jpg" alt="" />
                                 <span>mini bluethoot</span>
                                 <span className={styles.text}>$:5</span>
-                            </div>
-                            <div className={styles.cart}>
-                                <img src="/cartpic.jpg" alt="" />
-                                <span>mini bluethoot</span>
-                                <span className={styles.text}>$:5</span>
-                            </div>
+                            </div>*/}
+
                         </div>
                     </div>
                 </div>
             </div>
+
+
 
             <div className="container">
+
+
                 <div className="row mt-5" id={styles.catrow}>
                     <h5>CATEGORY</h5>
+
                     <div className='col-md-12 col-lg-12 col-sm-12  col-xs-12' id={styles.category}>
+
                         <div className="row">
-                            <div className='col' id={styles.col}>
-                                <img src="/category.png" alt="" className={styles.catimg} />
-                                <span>Cleanig gloves</span>
-                            </div>
-                            <div className='col' id={styles.col}>
-                                <img src="/category.png" alt="" className={styles.catimg} />
-                                <span>Cleanig gloves</span>
-                            </div>
-                            <div className='col' id={styles.col}>
-                                <img src="/category.png" alt="" className={styles.catimg} />
-                                <span>Cleanig gloves</span>
-                            </div>
-                            <div className='col' id={styles.col}>
-                                <img src="/category.png" alt="" className={styles.catimg} />
-                                <span>Cleanig gloves</span>
-                            </div>
-                            <div className='col' id={styles.col}>
-                                <img src="/category.png" alt="" className={styles.catimg} />
-                                <span>Cleanig gloves</span>
-                            </div>
-                            <div className='col' id={styles.col}>
-                                <img src="/category.png" alt="" className={styles.catimg} />
-                                <span>Cleanig gloves</span>
-                            </div>    <div className='col' id={styles.col}>
-                                <img src="/category.png" alt="" className={styles.catimg} />
-                                <span>Cleanig gloves</span>
-                            </div>    <div className='col' id={styles.col}>
-                                <img src="/category.png" alt="" className={styles.catimg} />
-                                <span>Cleanig gloves</span>
-                            </div>
-                            <div className="w-100"></div>
-                            <div className='col' id={styles.col}>
-                                <img src="/category.png" alt="" className={styles.catimg} />
-                                <span>Cleanig gloves</span>
-                            </div>
-                            <div className='col' id={styles.col}>
-                                <img src="/category.png" alt="" className={styles.catimg} />
-                                <span>Cleanig gloves</span>
-                            </div>
-                            <div className='col' id={styles.col}>
-                                <img src="/category.png" alt="" className={styles.catimg} />
-                                <span>Cleanig gloves</span>
-                            </div>
-                            <div className='col' id={styles.col}>
-                                <img src="/category.png" alt="" className={styles.catimg} />
-                                <span>Cleanig gloves</span>
-                            </div>
-                            <div className='col' id={styles.col}>
-                                <img src="/category.png" alt="" className={styles.catimg} />
-                                <span>Cleanig gloves</span>
-                            </div>
-                            <div className='col' id={styles.col}>
-                                <img src="/category.png" alt="" className={styles.catimg} />
-                                <span>Cleanig gloves</span>
-                            </div>    <div className='col' id={styles.col}>
-                                <img src="/category.png" alt="" className={styles.catimg} />
-                                <span>Cleanig gloves</span>
-                            </div>    <div className='col' id={styles.col}>
-                                <img src="/category.png" alt="" className={styles.catimg} />
-                                <span>Cleanig gloves</span>
-                            </div>
+                            {objArr.map((items, index) => (
+                                <div className='col' id={styles.col}>
+                                    <img src="/category.png" alt="" className={styles.catimg} />
+                                    <span>{items.text}</span>
+                                </div>
+
+                            ))}
                         </div>
+
                     </div>
+
                 </div>
 
             </div>
+
 
 
             <div className="container">
                 <div className="row mt-4" id={styles.forsale}>
                     <h3>FOR SALE</h3>
-                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
-                        <div className={styles.forsaleCart}>
-                            <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
-                            <div className={styles.FsaleCart}>
-                                <span>Mini Hair  Straightener And Straightener | Mini Hair.. </span><br />
-                                <span className={styles.cartPrice}>$ 99</span> <br />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
+                    {forSale.map((items, index) =>
+                        <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
+
+                            <div className={styles.forsaleCart}>
+                                <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
+                                <div className={styles.FsaleCart}>
+                                    <span>{items.text}</span><br />
+                                    <span className={styles.cartPrice}>$ 99</span> <br />
+                                    <ReactStars
+                                        count={5}
+                                        size={24}
+                                        value={5}
+                                        color2={'#ffd700'} />
+                                </div>
                             </div>
+
                         </div>
-                    </div>
-                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
-                        <div className={styles.forsaleCart}>
-                            <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
-                            <div className={styles.FsaleCart}>
-                                <span>Mini Hair  Straightener And Straightener | Mini Hair.. </span><br />
-                                <span className={styles.cartPrice}>$ 99</span> <br />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                            </div>
-                        </div>
-                    </div>
-                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
-                        <div className={styles.forsaleCart}>
-                            <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
-                            <div className={styles.FsaleCart}>
-                                <span>Mini Hair  Straightener And Straightener | Mini Hair.. </span><br />
-                                <span className={styles.cartPrice}>$ 99</span> <br />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                            </div>
-                        </div>
-                    </div>
-                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
-                        <div className={styles.forsaleCart}>
-                            <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
-                            <div className={styles.FsaleCart}>
-                                <span>Mini Hair  Straightener And Straightener | Mini Hair.. </span><br />
-                                <span className={styles.cartPrice}>$ 99</span> <br />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                            </div>
-                        </div>
-                    </div>
-                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
-                        <div className={styles.forsaleCart}>
-                            <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
-                            <div className={styles.FsaleCart}>
-                                <span>Mini Hair  Straightener And Straightener | Mini Hair.. </span><br />
-                                <span className={styles.cartPrice}>$ 99</span> <br />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                            </div>
-                        </div>
-                    </div>
-                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
-                        <div className={styles.forsaleCart}>
-                            <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
-                            <div className={styles.FsaleCart}>
-                                <span>Mini Hair  Straightener And Straightener | Mini Hair.. </span><br />
-                                <span className={styles.cartPrice}>$ 99</span> <br />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                            </div>
-                        </div>
-                    </div>
+                    )}
 
                 </div>
             </div>
 
             <div className="container">
                 <div className="row mt-4" id={styles.forsale}>
-                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
-                        <div className={styles.forsaleCart}>
-                            <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
-                            <div className={styles.FsaleCart}>
-                                <span>Mini Hair  Straightener And Straightener | Mini Hair.. </span><br />
-                                <span className={styles.cartPrice}>$ 99</span> <br />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
+                    {forSale.map((items, index) =>
+                        <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
+                            <div className={styles.forsaleCart}>
+                                <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
+                                <div className={styles.FsaleCart}>
+                                    <span>{items.text}</span><br />
+                                    <span className={styles.cartPrice}>$ 99</span> <br />
+                                    <ReactStars
+                                        count={5}
+                                        size={24}
+                                        value={3}
+                                        color2={'#ffd700'} />
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
-                        <div className={styles.forsaleCart}>
-                            <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
-                            <div className={styles.FsaleCart}>
-                                <span>Mini Hair  Straightener And Straightener | Mini Hair.. </span><br />
-                                <span className={styles.cartPrice}>$ 99</span> <br />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                            </div>
-                        </div>
-                    </div>
-                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
-                        <div className={styles.forsaleCart}>
-                            <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
-                            <div className={styles.FsaleCart}>
-                                <span>Mini Hair  Straightener And Straightener | Mini Hair.. </span><br />
-                                <span className={styles.cartPrice}>$ 99</span> <br />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                            </div>
-                        </div>
-                    </div>
-                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
-                        <div className={styles.forsaleCart}>
-                            <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
-                            <div className={styles.FsaleCart}>
-                                <span>Mini Hair  Straightener And Straightener | Mini Hair.. </span><br />
-                                <span className={styles.cartPrice}>$ 99</span> <br />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                            </div>
-                        </div>
-                    </div>
-                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
-                        <div className={styles.forsaleCart}>
-                            <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
-                            <div className={styles.FsaleCart}>
-                                <span>Mini Hair  Straightener And Straightener | Mini Hair.. </span><br />
-                                <span className={styles.cartPrice}>$ 99</span> <br />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                            </div>
-                        </div>
-                    </div>
-                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
-                        <div className={styles.forsaleCart}>
-                            <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
-                            <div className={styles.FsaleCart}>
-                                <span>Mini Hair  Straightener And Straightener | Mini Hair.. </span><br />
-                                <span className={styles.cartPrice}>$ 99</span> <br />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                            </div>
-                        </div>
-                    </div>
-
+                    )}
                 </div>
             </div>
 
             <div className="container">
                 <div className="row mt-4" id={styles.forsale}>
-                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
-                        <div className={styles.forsaleCart}>
-                            <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
-                            <div className={styles.FsaleCart}>
-                                <span>Mini Hair  Straightener And Straightener | Mini Hair.. </span><br />
-                                <span className={styles.cartPrice}>$ 99</span> <br />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
+                    {forSale.map((items, index) =>
+                        <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
+                            <div className={styles.forsaleCart}>
+                                <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
+                                <div className={styles.FsaleCart}>
+                                    <span>{items.text}</span><br />
+                                    <span className={styles.cartPrice}>$ 99</span> <br />
+                                    <ReactStars
+                                        count={5}
+                                        size={24}
+                                        value={4}
+                                        color2={'#ffd700'} />
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
-                        <div className={styles.forsaleCart}>
-                            <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
-                            <div className={styles.FsaleCart}>
-                                <span>Mini Hair  Straightener And Straightener | Mini Hair.. </span><br />
-                                <span className={styles.cartPrice}>$ 99</span> <br />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                            </div>
-                        </div>
-                    </div>
-                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
-                        <div className={styles.forsaleCart}>
-                            <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
-                            <div className={styles.FsaleCart}>
-                                <span>Mini Hair  Straightener And Straightener | Mini Hair.. </span><br />
-                                <span className={styles.cartPrice}>$ 99</span> <br />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                            </div>
-                        </div>
-                    </div>
-                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
-                        <div className={styles.forsaleCart}>
-                            <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
-                            <div className={styles.FsaleCart}>
-                                <span>Mini Hair  Straightener And Straightener | Mini Hair.. </span><br />
-                                <span className={styles.cartPrice}>$ 99</span> <br />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                            </div>
-                        </div>
-                    </div>
-                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
-                        <div className={styles.forsaleCart}>
-                            <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
-                            <div className={styles.FsaleCart}>
-                                <span>Mini Hair  Straightener And Straightener | Mini Hair.. </span><br />
-                                <span className={styles.cartPrice}>$ 99</span> <br />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                            </div>
-                        </div>
-                    </div>
-                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
-                        <div className={styles.forsaleCart}>
-                            <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
-                            <div className={styles.FsaleCart}>
-                                <span>Mini Hair  Straightener And Straightener | Mini Hair.. </span><br />
-                                <span className={styles.cartPrice}>$ 99</span> <br />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                            </div>
-                        </div>
-                    </div>
+                    )}
 
                 </div>
             </div>

@@ -5,7 +5,9 @@
 }
 
 .FeaturedItem{
-    margin: 3px;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 20px;
     flex: 1;
     padding: 30px;
     border-radius: 10px;
