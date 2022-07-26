@@ -24,7 +24,9 @@ console.log(users,"local storage")
 setUsersName(((users!==null)&&(users!==undefined)) ? users : "")
 setUsersEmail(((usersemail!==null)&&(usersemail!==undefined)) ? usersemail : "Login")
 }, [])
+
     const createCheckoutSession = async () => {
+
         const stripe = await stripePromise;
         const checkoutSession =
          await axios.post('/api/create-checkout-session',
@@ -71,7 +73,7 @@ setUsersEmail(((usersemail!==null)&&(usersemail!==undefined)) ? usersemail : "Lo
                 />
                 }
                 ) : null}
-                {console.log("CartItems",items)}
+                {console.log("CartItems",items[0].price_total)}
                 </div>
                
                 <div className={styles.back_to_shop}><a href="#"><FontAwesomeIcon icon={faArrowCircleLeft } /></a><span className="text-muted">Back to shop</span></div>
@@ -86,7 +88,7 @@ setUsersEmail(((usersemail!==null)&&(usersemail!==undefined)) ? usersemail : "Lo
                
                 <div className="row" id={styles.row}>
                     <div className="col" id={styles.col}>TOTAL PRICE</div>
-                    <div className="col text-right">${total}</div>
+                    <div className="col text-right">${items[0].price_total}</div>
                 </div>
                 <button className={styles.btn} onClick={createCheckoutSession}>CHECKOUT</button>
             </div>

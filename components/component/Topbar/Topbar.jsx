@@ -7,7 +7,7 @@ function Topbar() {
     <div className={styles.Topbar}>
       <div className={styles.TopbarWrapper}>
          <div className={styles.topleft}>
-           <span className={styles.Logo}>CRAIGLIST</span>
+           <span className={styles.Logo}>weblisted</span>
          </div>
          <div className={styles.topRight}>
             <div className={styles.topbarIconContainer}>

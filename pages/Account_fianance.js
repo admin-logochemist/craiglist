@@ -824,7 +824,7 @@ const Account_fianance = () => {
                                                     <div id={styles.form_inside_list}>
                                                         <span><b> email privacy options [?]</b> </span>
                                                         <label>
-                                                            <input type="radio" name="optionsRadios" id="optionsRadios3" value="CLMailRelay" onClick={(e) => setCLMailRelay(e.target.value)} /> &nbsp;CL mail relay (recommended)
+                                                            <input type="radio" name="optionsRadios" id="optionsRadios3" value="CLMailRelay" onClick={(e) => setCLMailRelay(e.target.value)} /> &nbsp;WL mail relay (recommended)
                                                         </label>
                                                         <label>
                                                             <input type="radio" name="optionsRadios" id="optionsRadios3" value="RealEmail" onClick={(e) => setRealEmail(e.target.value)} /> &nbsp;show my real email address

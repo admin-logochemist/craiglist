@@ -8,7 +8,7 @@ export default function systemStatus() {
     return (
         <>
             <div className={styles.global_header}>
-                <a className={styles.header_logo} name="logoLink" href="/">CL</a>
+                <a className={styles.header_logo} name="logoLink" href="/">WL</a>
 
                 <nav className={styles.breadcrumbs_container}>
 

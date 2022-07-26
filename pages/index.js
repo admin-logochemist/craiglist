@@ -226,23 +226,23 @@ const handleSubmit = () => {
             <ul className={styles.home_ul}>
               <li className={styles.a_3}> 
 
-                <a href="/About">About Craigslist</a>
+                <a href="/About">About weblisted</a>
               </li>
               <li className={styles.a_3}>
 
-                <a href="/opensource">Craigslist Open Source</a>
+                <a href="/opensource">weblisted Open Source</a>
               </li>
               <li className={styles.a_3}>
 
-                <a href="/craigslistHiring">Craigslist Hiring</a>
+                <a href="/craigslistHiring">weblisted Hiring</a>
               </li>
               <li className={styles.a_3}>
 
-                <a href="/bestofcraigslist">Best-Of-Craigslist</a>
+                <a href="/bestofcraigslist">Best-Of-weblisted</a>
               </li>
               <li className={styles.a_3}>
 
-                <a href="">"Craigslist Joe"</a>
+                <a href="">"weblisted Joe"</a>
               </li>
               <li className={styles.a_3}>
 
@@ -818,7 +818,7 @@ const handleSubmit = () => {
 
               <div className={styles.home_select_div}>
                 <span>
-                  Cl Worldwide
+                  WL Worldwide
                 </span> <br />
                 <select name="" id="" className={styles.home_select} onClick={handleCapacity} >
                   <option value="africa">africa</option>
@@ -845,7 +845,7 @@ const handleSubmit = () => {
       <div className="container" id={styles.footer}>  
         <div className={styles.footer_home}>
           <ul className={styles.clfooter_home}>
-            <li>© 2022  <span className={styles.desktop}>craigslist </span><span className={styles.mobile}>CL</span></li>&nbsp;&nbsp;
+            <li>© 2022  <span className={styles.desktop}>weblisted </span><span className={styles.mobile}>WL</span></li>&nbsp;&nbsp;
             <li><a href="">help</a></li> &nbsp;&nbsp;&nbsp;&nbsp;
             <li><a href="">safety</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
             <li className={styles.desktop}><a href="">privacy</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
