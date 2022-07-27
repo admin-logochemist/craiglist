@@ -43,7 +43,7 @@ const bull = (
                href='/Store' 
 
                 textAlign="right"
-               >Learn More</Button>
+               >Explore More</Button>
             </CardActions>
           </Card>
             </Grid>
@@ -64,7 +64,7 @@ const bull = (
                href='/Store' 
 
                 textAlign="right"
-               >Learn More</Button>
+               >Explore More</Button>
             </CardActions>
           </Card>
             </Grid>
@@ -85,7 +85,7 @@ const bull = (
                href='/Store' 
 
                 textAlign="right"
-               >Learn More</Button>
+               >Explore More</Button>
             </CardActions>
           </Card>
             </Grid>
@@ -106,7 +106,7 @@ const bull = (
                <Button  
                href='/Store' 
                 textAlign="right"
-               >Learn More</Button>
+               >Explore More</Button>
             </CardActions>
           </Card>
             </Grid>
