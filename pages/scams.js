@@ -9,7 +9,7 @@ export default function scams() {
                 <div className="row">
                     <div className="col-lg-12">
                         <div className={styles.global_header}>
-                            <a className={styles.header_logo} name="logoLink" href="/">CL</a>
+                            <a className={styles.header_logo} name="logoLink" href="/">WL</a>
 
                             <nav className={styles.breadcrumbs_container}>
 
@@ -48,7 +48,7 @@ export default function scams() {
                             <li><strong>Never give out financial info</strong> (bank account, social security, paypal account, etc).</li>
                             <li><strong>Do not rent or purchase sight-unseen</strong>—that amazing "deal" may not exist.</li>
                             <li><strong>Refuse background/credit checks</strong> until you have met landlord/employer in person.</li>
-                            <li><strong>"craigslist voicemails" </strong>- Any message asking you to access or check "craigslist voicemails" or "craigslist voice messages" is fraudulent - <strong>no such service exists.</strong></li>
+                            <li><strong>"weblisted voicemails" </strong>- Any message asking you to access or check "weblisted voicemails" or "weblisted voice messages" is fraudulent - <strong>no such service exists.</strong></li>
                         </ul>
                         <hr />
                         <h4>Who should I notify about fraud or scam attempts?</h4>
@@ -66,7 +66,7 @@ export default function scams() {
                             <li><a href="">Canadian Anti-Fraud Centre</a> or 888-495-8501 (toll-free)</li>
                         </ul>
                         <p>If you are defrauded by someone you met in person, contact your local police department.</p>
-                        <p>If you suspect that a craigslist post may be connected to a scam, please <a href="">send us the details</a>.</p>
+                        <p>If you suspect that a weblisted post may be connected to a scam, please <a href="">send us the details</a>.</p>
                         <hr />
                         <h3>Recognizing scams</h3>
                         <p>Most scams attempts involve one or more of the following:</p>
@@ -81,7 +81,7 @@ export default function scams() {
                         <p>1. Someone <em>claims your</em> transaction is guaranteed, that a buyer/seller is officially certified, OR<em> that a third party of any kind will handle or provide protection</em> for a payment:</p>
                         <ul>
                             <li>These claims are fraudulent, as transactions are between users only.</li>
-                            <li>The scammer will often send an official looking (but fake) email that appears to come from craigslist or another third party, offering a guarantee, certifying a seller, or pretending to handle payments.</li>
+                            <li>The scammer will often send an official looking (but fake) email that appears to come from weblisted or another third party, offering a guarantee, certifying a seller, or pretending to handle payments.</li>
                         </ul>
                         <p><strong>2.&nbsp;</strong><strong><em>D</em></strong><strong><em>istant person</em> offers a genuine-looking (but fake) <em>cashier's check</em></strong><strong>:</strong></p>
                         <ul>
@@ -125,7 +125,7 @@ export default function scams() {
                             <li>This kind of "position" may be posted as a job, or offered to you via email.</li>
                         </ul>
                         <hr />
-                        <h3>Actual scam emails sent to craigslist users:</h3>
+                        <h3>Actual scam emails sent to weblisted users:</h3>
                         <p>&nbsp;</p>
                         <p><span>Hi,</span></p>
                         <div><span>I am selling this car because my platoon has been sent back to Afganistan and don't want it get old in my backyard. The price is low because I need to sell it before November 16th. It has no damage, no scratches or dents, no hidden defects. It is in immaculate condition, meticulously maintained and hasn't been involved in any accident...I do have the title , clear, under my name. The <span id="lw_1267122116_0" className={styles.yshortcuts}>Denali</span> has 35,000 miles VIN#&nbsp;<span>1GKEK63U16J138428&nbsp;</span>.</span></div>
@@ -140,7 +140,7 @@ export default function scams() {
                         <hr />
                         <p>&nbsp;</p>
                         <p><span>Hello,</span></p>
-                        <p><span>I am looking for caring and honest person to watch my 3 years old daughter while I work, during our stay in the state and a friend introduced craiglist.com to me, I was searching on Childcare Babysitter, when your Ad post pumped up as a Childcare and Babysitter, am interested in your service as my babysitter/Childcare.. My Little daughters is (Mellina ) , I would like you to watch over her while i am at work in your Location , I reside in United Kingdom,I will be coming to the States in about two weeks time , Cos I just got a contract with Boss Perfume fashion industry down there, I work as a model and the contract will last for a month, the duration of our service wil be from 10am to 5pm, monday thru friday, I would like to know if she will be taken care of in your childcare centre/Home, or the hotel room where i would be lodging, It's Okay by me, any of this ways.<br /><br />My little daughter (Mellina ) is 3 years old, I will be waiting patiently for your email indicating the cost of everything,I mean the price for your service,how long you will be available to take care of her,how much u charge per week. she is just three years old as i have said earlier and i will be glad to update you and make the payment in advance to show you how serious i am. So please get back to me as soon as you can if you will be able to handle her and take very good care of her for me. <br /><br />Email me back<br />Your's faithfully</span></p>
+                        <p><span>I am looking for caring and honest person to watch my 3 years old daughter while I work, during our stay in the state and a friend introduced weblisted.com to me, I was searching on Childcare Babysitter, when your Ad post pumped up as a Childcare and Babysitter, am interested in your service as my babysitter/Childcare.. My Little daughters is (Mellina ) , I would like you to watch over her while i am at work in your Location , I reside in United Kingdom,I will be coming to the States in about two weeks time , Cos I just got a contract with Boss Perfume fashion industry down there, I work as a model and the contract will last for a month, the duration of our service wil be from 10am to 5pm, monday thru friday, I would like to know if she will be taken care of in your childcare centre/Home, or the hotel room where i would be lodging, It's Okay by me, any of this ways.<br /><br />My little daughter (Mellina ) is 3 years old, I will be waiting patiently for your email indicating the cost of everything,I mean the price for your service,how long you will be available to take care of her,how much u charge per week. she is just three years old as i have said earlier and i will be glad to update you and make the payment in advance to show you how serious i am. So please get back to me as soon as you can if you will be able to handle her and take very good care of her for me. <br /><br />Email me back<br />Your's faithfully</span></p>
                         <p>&nbsp;</p>
                         <hr />
                         <pre><br />&gt; Thanks for your mail,Since the cost of your bike is $800 i just contacted<br />my client about the cost of your bike and it present condition and he said<br />there is no problem about that.So my client said he will be issuing you a<br />Certified Check of $4000 while you wire 3000 to me through Western Union<br />Money Trasfer and you deduct the cost of your bike $800 and keep the<br />remaining $200 which my client said you should take for the terms of<br />Transaction and Agreement between you and my client.So i will like you to<br />send me your full contact information to where my client will be sending you<br />&gt; the Certified Check like this:<br />&gt; name.........<br />&gt; full address.............<br />&gt; city...............<br />&gt; state.............<br />&gt; country..........<br />&gt; zipcode............<br />&gt; cell/office/home phone number.......................<br />&gt; I will look forward to the requested information as soon as  possible so<br />that the check can be sent out to you immediately  And do get back to me<br />with the Pics of the bike so tha! t my client will  be Able to see What he<br />is paying off.Get back to me immediately. Looking torwards your<br />&gt; respond,<br />&gt; Best Regards.<br /><br /></pre>
@@ -148,15 +148,15 @@ export default function scams() {
                 </div>
                 <footer className={styles.footer}>
                 <ul className={styles.clfooter}>
-                    <li>© 2022 <span className={styles.desktop}>craigslist</span><span className={styles.mobile}>CL</span></li>
+                    <li>© 2022 <span className={styles.desktop}>weblisted</span><span className={styles.mobile}>WL</span></li>
                     <li><a href="">help</a></li>
                     <li><a href="">safety</a></li>
                     <li className={styles.desktop}><a href="">privacy</a></li>
                     <li className={styles.desktop}><a href="">feedback</a></li>
                     <li><a href="">terms</a></li>
                     <li><a href="">about</a></li>
-                    <li><a href="">craigslist app</a></li>
-                    <li><a href="">cl is hiring</a></li>
+                    <li><a href="">weblisted app</a></li>
+                    <li><a href="">WL is hiring</a></li>
                 </ul>
             </footer>
 

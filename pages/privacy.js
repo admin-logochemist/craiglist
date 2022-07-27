@@ -7,7 +7,7 @@ export default function privacy() {
     <>
           <div className="">
         <div className={styles.global_header}>
-          <a className={styles.header_logo} name="logoLink" href="/">craigslist</a>
+          <a className={styles.header_logo} name="logoLink" href="/">weblisted</a>
 
           <nav className={styles.breadcrumbs_container}>
 
@@ -32,14 +32,14 @@ export default function privacy() {
       </div>
       <section className={styles.simple_page_content}>
             <section className={styles.privacy_policy_heading}>
-    <h2>craigslist Privacy Policy <small>(updated September 15, 2020)</small></h2>
+    <h2>weblisted Privacy Policy <small>(updated September 15, 2020)</small></h2>
     <p>
-        <a href="https://www.craigslist.org/about/terms.of.use">terms of use</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <a href="https://forums.craigslist.org/?forumID=8">feedback</a>
+        <a href="https://www.weblisted.org/about/terms.of.use">terms of use</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="https://forums.weblisted.org/?forumID=8">feedback</a>
     </p>
 </section>
 <p>
-    This policy details how data about you is used when you access our websites and services, including via our mobile applications (together, "CL") or interact with us. If we update it, we will revise the date, place notices on CL if changes are material, and/or obtain your consent as required by law.
+    This policy details how data about you is used when you access our websites and services, including via our mobile applications (together, "WL") or interact with us. If we update it, we will revise the date, place notices on WL if changes are material, and/or obtain your consent as required by law.
 </p>
 <h4>1. Protecting your privacy</h4>
 <ul>
@@ -49,14 +49,14 @@ export default function privacy() {
     <li>We do not engage in cross-marketing or link-referral programs.</li>
     <li>We do not employ tracking devices for marketing purposes.</li>
     <li>We do not send you unsolicited communications for marketing purposes.</li>
-    <li>We do not engage in affiliate marketing (and prohibit it on CL).</li>
+    <li>We do not engage in affiliate marketing (and prohibit it on WL).</li>
     <li>We do provide email proxy &amp; relay services to reduce unwanted email.</li>
-    <li>Please review privacy policies of any third party sites linked to from CL.</li>
+    <li>Please review privacy policies of any third party sites linked to from WL.</li>
     <li>We do not respond to "Do Not Track" signals (see allaboutdnt.com).</li>
 </ul>
 
 <h4>2. Data we collect, use and disclose:</h4>
-<p>Below is a list of all the types of data we have collected in the last 12 months, where we got it, why we collected it and the categories of third parties to whom we disclosed it. We do not sell your data to third parties. Please note that disclosure to "Payment processors" applies when you pay for a craigslist post using a credit card.</p>
+<p>Below is a list of all the types of data we have collected in the last 12 months, where we got it, why we collected it and the categories of third parties to whom we disclosed it. We do not sell your data to third parties. Please note that disclosure to "Payment processors" applies when you pay for a weblisted post using a credit card.</p>
 
 
 <table cellPadding={3} cellSpacing={0} border="1" className={styles.pp_table}>
@@ -83,7 +83,7 @@ First and last name
 User entry
 </td>
 <td valign="top">
-Facilitating transactions and personalizing your use of CL
+Facilitating transactions and personalizing your use of WL
 </td>
 <td valign="top">
 Payment processors
@@ -97,7 +97,7 @@ Email address
 User entry
 </td>
 <td valign="top">
-Account creation, user-to-user and CL-to-user communications and combatting fraud/abuse
+Account creation, user-to-user and WL-to-user communications and combatting fraud/abuse
 </td>
 <td valign="top">
 No one
@@ -111,7 +111,7 @@ Phone number
 User entry
 </td>
 <td valign="top">
-User-to-user communications, combatting fraud/abuse, personalizing your use of CL
+User-to-user communications, combatting fraud/abuse, personalizing your use of WL
 </td>
 <td valign="top">
 Payment processors and phone verification service providers
@@ -125,7 +125,7 @@ Mailing or street address
 User entry
 </td>
 <td valign="top">
-Account and post creation, CL communicating with corporate users, facilitating transactions and personalizing your use of CL
+Account and post creation, WL communicating with corporate users, facilitating transactions and personalizing your use of WL
 </td>
 <td valign="top">
 Payment processors
@@ -153,7 +153,7 @@ Geographic location (latitude and longitude)
 User entry, IP/geolocation providers
 </td>
 <td valign="top">
-Personalizing your use of CL and combatting fraud/abuse
+Personalizing your use of WL and combatting fraud/abuse
 </td>
 <td valign="top">
 No one
@@ -161,13 +161,13 @@ No one
 </tr>
 <tr>
 <td valign="top">
-Photos and other data you voluntarily provide, post on or send via CL
+Photos and other data you voluntarily provide, post on or send via WL
 </td>
 <td valign="top">
 User entry
 </td>
 <td valign="top">
-Facilitating and personalizing your use of CL
+Facilitating and personalizing your use of WL
 </td>
 <td valign="top">
 No one
@@ -181,7 +181,7 @@ Saved searches, account preferences, favorite/hidden postings
 User entry
 </td>
 <td valign="top">
-Facilitating and personalizing your use of CL
+Facilitating and personalizing your use of WL
 </td>
 <td valign="top">
 No one
@@ -192,10 +192,10 @@ No one
 HTTP browser cookie
 </td>
 <td valign="top">
-User's browser, CL web server
+User's browser, WL web server
 </td>
 <td valign="top">
-Facilitating and personalizing your use of CL and combatting fraud/abuse
+Facilitating and personalizing your use of WL and combatting fraud/abuse
 </td>
 <td valign="top">
 No one
@@ -209,7 +209,7 @@ Information about your device and browser such as device ID, browser version, op
 User's browser, mobile app
 </td>
 <td valign="top">
-Facilitating and personalizing your use of CL and combatting fraud/abuse
+Facilitating and personalizing your use of WL and combatting fraud/abuse
 </td>
 <td valign="top">
 No one
@@ -251,13 +251,13 @@ No one
 <p>We may share some or all of the above listed data in the following circumstances:</p>
 <ul>
 <li>to respond to subpoenas, search warrants, court orders, or other legal process.</li>
-<li>to protect the rights, property, or safety of CL users, CL, or the general public.</li>
+<li>to protect the rights, property, or safety of WL users, WL, or the general public.</li>
 <li>at your direction (e.g. if you authorize us to share data with other users).</li>
 <li>in connection with a merger, bankruptcy, or sale/transfer of assets.</li>
 </ul>
 <h4>3. Data we store</h4>
 <ul>
-<li>We retain data as needed to facilitate and personalize your use of CL, combat fraud/abuse and/or as required by law.</li>
+<li>We retain data as needed to facilitate and personalize your use of WL, combat fraud/abuse and/or as required by law.</li>
 <li>We make good faith efforts to store data securely, but can make no guarantees.</li>
 <li>You may access and update certain data about you via your account login.</li>
 </ul>
@@ -271,31 +271,31 @@ No one
 
 <p><b>Right to non-discrimination:</b> You have the right not to receive discriminatory treatment for exercising the rights listed above.</p>
 
-<p>You may submit a request to know or delete via <a href="">craigslist.org/about/ccpa</a> or ccpa@craigslist.org . </p>
+<p>You may submit a request to know or delete via <a href="">weblisted.org/about/ccpa</a> or ccpa@weblisted.org . </p>
 
 <p>Only you, or someone you authorize to act on your behalf, may make a request to know or delete your data. An authorized agent may make a request on your behalf by providing written permission signed by you. </p>
 
 <p>We will need to confirm your identity before processing your request by asking you to log into your existing account (if you are a registered user) or by asking you for additional information, such as a government issued ID, to confirm your identity against information we have already collected. </p>
 
-<p>If you are a registered CL user under the age of 18, you may request (via eraser@craigslist.org) and obtain removal of content or information publicly posted on CL. Please note that removal does not ensure complete or comprehensive removal of said content or information from the Internet.</p>
+<p>If you are a registered WL user under the age of 18, you may request (via eraser@weblisted.org) and obtain removal of content or information publicly posted on WL. Please note that removal does not ensure complete or comprehensive removal of said content or information from the Internet.</p>
 
 <h4>5. International Users</h4>
-<p>By accessing CL or providing us data, you agree we may use and disclose data we collect as described here or as communicated to you, transmit it outside your resident jurisdiction, and store it on servers in the United States. For more information please contact our privacy officer at privacy@craigslist.org .</p>
+<p>By accessing WL or providing us data, you agree we may use and disclose data we collect as described here or as communicated to you, transmit it outside your resident jurisdiction, and store it on servers in the United States. For more information please contact our privacy officer at privacy@weblisted.org .</p>
 <h4>6. Contact</h4>
-<p>If you have any questions or concerns about CL's privacy policy and practices please email privacy@craigslist.org .</p>
+<p>If you have any questions or concerns about WL's privacy policy and practices please email privacy@weblisted.org .</p>
 
             </section>
       <footer className={styles.footer}>
         <ul className={styles.clfooter}>
-          <li>© 2022 <span className={styles.desktop}>craigslist</span><span className={styles.mobile}>CL</span></li>
+          <li>© 2022 <span className={styles.desktop}>weblisted</span><span className={styles.mobile}>WL</span></li>
           <li><a href="">help</a></li>
           <li><a href="">safety</a></li>
           <li className={styles.desktop}><a href="">privacy</a></li>
           <li className={styles.desktop}><a href="">feedback</a></li>
           <li><a href="">terms</a></li>
           <li><a href="">about</a></li>
-          <li><a href="">craigslist app</a></li>
-          <li><a href="">cl is hiring</a></li>
+          <li><a href="">weblisted app</a></li>
+          <li><a href="">WL is hiring</a></li>
         </ul>
       </footer>
     </>

@@ -91,6 +91,13 @@ function ProductAdd() {
 
             )
             alert("form submited")
+            setTitle('')
+            setPrice('')
+            setWeight('')
+            setHeight('')
+            setWidth('')
+            setDescription('')
+            setCategory()
         } catch (err) {
             alert(err)
         }
