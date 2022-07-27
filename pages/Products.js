@@ -5,10 +5,13 @@ import ReactImageMagnify from 'react-image-magnify';
 import styles from '../styles/Products.module.css'
 import ProductDetail from '../components/component/ProductDetail';
 import Reviews from '../components/component/Reviews';
+import { useSelector } from 'react-redux';
+import { selectOpenResturant } from '.././components/features/ResSlice';
 const Products = () => {
 
 
 
+    const selectResturant = useSelector(selectOpenResturant)
     return (
 
 
@@ -30,10 +33,10 @@ const Products = () => {
                                     smallImage: {
                                         alt: 'Wristwatch by Ted Baker London',
                                         isFluidWidth: true,
-                                        src: "https://cf.shopee.com.my/file/d9c1caffb49e6db9a5352e7c3cca5c93"
+                                        src: selectResturant?.data().image,
                                     },
                                     largeImage: {
-                                        src: "https://cf.shopee.com.my/file/d9c1caffb49e6db9a5352e7c3cca5c93",
+                                        src: selectResturant?.data().image,
                                         width: 1200,
                                         height: 1800
                                     }
@@ -46,7 +49,7 @@ const Products = () => {
                                 
                                 </div>
                                 <div className="col-lg-6" id={styles.detailsSection}>
-                                    <ProductDetail />
+                                    <ProductDetail title={selectResturant?.data().title} description={selectResturant?.data().description} category={selectResturant?.data().category} price={selectResturant?.data().price}/>
                                 </div>
                                 <div className="col-lg-3"></div>
                             </div>

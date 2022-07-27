@@ -3,11 +3,11 @@ import styles from '../../styles/Products.module.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import { StarRate, ShareSharp, Favorite } from '@material-ui/icons'
 
-const ProductDetail = () => {
+const ProductDetail = ({title,category,price,description}) => {
     return (
         <>
             <div>
-                <span className={styles.HeadingProduct}>Brand Design Fashion trendy men chest shoulder crossbody mini backpack light weight bag use for boys also girls.</span>
+                <span className={styles.HeadingProduct}>{title}</span>
             </div>
             <div className={styles.IconSec}>
                 <span>
@@ -23,20 +23,20 @@ const ProductDetail = () => {
                 </span>
             </div>
             <div>
-                <span className={styles.Brand}>Brand:No Brand | More Men Bags from No Brand</span>
+                <span className={styles.Brand}>Brand:{category}</span>
             </div>
             <div className={styles.Rate}>
-                <h2 className={styles.price}>$.400</h2>
+                <h2 className={styles.price}>${price}</h2>
                 <span><s>%40 off</s></span>
             </div>
             <div className={styles.ProductDetailImgdiv}>
                         <div className="row">
                             <div className="col-lg-2" id={styles.ProductImgcol}>
-                             <span>color</span>
-                             <span>Quality</span>
+                             <span>{description}</span>
+                             
                             </div>
                             <div className="col-lg-4" id={styles.ProductImgcol2}>
-                               <span>grey</span>
+                               
                                 <div className={styles.Img}>
                                 <span><img src="https://ae01.alicdn.com/kf/H4a063726da3c4502a6ca00b55b553b53e/Chest-Bags-Crossing-Beg-for-Boys-Sling-Bag-Men-Sling-Pack-Waterproof-Young-People-Satchel-Nylon.jpg" alt=""  className={styles.ProductDetailImg}/></span>
                                 <span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQWX0RgVyt50MuNjemqkDgdpP2j5IRhv2sTCxK8fYV82ksky5D4q8Y7pjsncyN_0mZPi4&usqp=CAU" alt="" className={styles.ProductDetailImg}/></span>
