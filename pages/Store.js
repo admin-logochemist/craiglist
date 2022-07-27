@@ -210,7 +210,6 @@ function Store() {
             </div>
 
             <div className="container-fluid">
-
                 <div className="row" id={styles.collist}>
                     <div className='col-lg-1'></div>
                     <div className="col-lg-11" >
