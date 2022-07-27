@@ -1,55 +1,85 @@
 import React, { useState } from "react";
 import styles from '../styles/form.module.css'
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../firebase';
-import { useRouter } from 'next/router'
-import { useDispatch } from 'react-redux';
 import { addDoc, collection, serverTimestamp, updateDoc, doc } from 'firebase/firestore'; 
 import { db, storage } from '../firebase';
+import { auth } from '../firebase';
+import Link from 'next/link';
+import { loadStripe } from '@stripe/stripe-js';
+import axios from 'axios';
 import { login, logout, } from "../components/features/UderSlice";
-import { Link } from "styled-icons/bootstrap";
+import { useRouter } from 'next/router'
+import { useDispatch } from 'react-redux';
+
 function FormSignup() {
 
-
-
   const [email, setEmail] = useState("")
-  const [select, setSelect] = useState("")
   const [password, setPassword] = useState("")
   const [name, setName] = useState("");
-  const [uid, setUids] = useState("");
+  const [phone, setPhone] = useState("");
+  const [bname, setBName] = useState("");
+  const [address, setAddress] = useState("")
+  const [btype, setBtype] = useState("")
+  const [bankac, setBankac] = useState("")
+  const [industry, setIndustry] = useState("")
+  const [bweb, setBweb] = useState("")
+  const [uids, setUids] = useState("")
+  const [hasError, Error] = useState("");
+  const [select,setSelect]= React.useState();
   const dispatch = useDispatch();
+  const stripePromise = loadStripe(`${process.env.STRIPE_PUBLIC_KEY}`)
   const router = useRouter()
+  const handleCapacity=(e)=>{
+      setSelect(e.target.value);
+     
+  }
+    const registers = async() => {
 
-  const registers = () => {
-
-    createUserWithEmailAndPassword(auth,email,password).then((userAuth) => {
-      dispatch(login({
-        email: userAuth.user.email,
-        password: userAuth.user.password,
-
-      }))
-        setUids(userAuth.user.uid)
-        localStorage.setItem('email', email);
-    
-         localStorage.setItem('displayName', name);
-         const docRef =  addDoc(collection(db, 'userid'), {
-          email:email,
-          password:password,
-          name:name,
-          type:select,
-        
-         
-        })
+        createUserWithEmailAndPassword(auth,email,password).then((userAuth) => {
+            setUids(userAuth.user.uid)
+            localStorage.setItem('email', email);
+            localStorage.setItem('accid', accId);
+             localStorage.setItem('displayName', name);
+        }).catch(function(error) {
+          var errorMessage = error.message;
+          console.log("errorMessage: "+ errorMessage)
+        });
       
-
-        router.push('/')
-    }).catch(function(error) {
-      var errorMessage = error.message;
-      console.log("errorMessage: "+ errorMessage )
-    });
+        const stripe = await stripePromise;
+        const RegisterSession =
+         await axios.post('/api/connectedaccount',
+            {
+              
+                email: email,
+            
+            })
+            const accId= RegisterSession.data.id
+              console.log("accId: "+ accId)
+              const link=RegisterSession.data.link
+              console.log("link: "+ link)
+          
+  if(select==='User'|| accId!=null){
+          const docRef = await addDoc(collection(db, 'userid'), {
+              email:email,
+              password:password,
+              name:name,
+              phone:phone,
+              select:select,
+              bname:bname,
+            accId:accId,
+            object: "bank_account",
+          country: "US",
+          currency: "usd",
+          routing_number: "110000000",
+          account_number: "000123456789",
+          address:address   
+            })
+          
   
-  
- 
+            router.push(select==='user' ? '/' : link)
+          }
+     
+      // router.push(select==='user' ? '/' : '/ResturentOwner')
     
     }
   return (
@@ -65,6 +95,7 @@ function FormSignup() {
             <option value="User">As User</option>
             <option value="Seller">As Seller</option>
             </select>
+            
             <button onClick={registers}>create</button>
        
         </div>

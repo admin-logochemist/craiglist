@@ -15,7 +15,7 @@ function CheckOut() {
     const total = useSelector(selectTotal);
     const [usersName, setUsersName ] = useState("");
     const [usersEmail, setUsersEmail ] = useState("");
-    const stripePromise = loadStripe("pk_test_51KosFhFwyx0lKIchAhCk1Lua6CU9NQlovXtmseEEmTP02yAILBK9sLNFjehxXq9bhfHQt3U3ZR4HuASJHMJhBAYt00XZvsEuMM")
+    const stripePromise = loadStripe(`pk_test_51KosFhFwyx0lKIchAhCk1Lua6CU9NQlovXtmseEEmTP02yAILBK9sLNFjehxXq9bhfHQt3U3ZR4HuASJHMJhBAYt00XZvsEuMM`)
 useEffect(() => {
 // Perform localStorage action
 const users = localStorage.getItem('displayName')
