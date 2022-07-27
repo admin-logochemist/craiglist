@@ -216,7 +216,7 @@ function Store() {
                         <ul className={styles.storeheadul}>
                             <li>SAVE MORE ON APP</li>
                             <li>AFFILIATE PROGRAM</li>
-                            <li>SELL ON CRAIGLIST</li>
+                            <li>SELL ON weblisted</li>
                             <li>CUSTOMER CARE</li>
                             <li>TRACK MY ORDER</li>
                         </ul>
@@ -331,7 +331,7 @@ function Store() {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12 col-md-12 col-sm-12 mt-5" id={styles.Mall}>
-                        <h5>CRAIGLIST MALL</h5>
+                        <h5>weblisted MALL</h5>
                         <div className={styles.mallborder}>
                             {objArrz.map((items, index) => (
                                 <div className={styles.cart}>
@@ -496,7 +496,7 @@ function Store() {
                     </div>
                     <div className="col-lg-3 col-md-3 col-sm-3" id={styles.footerlist}>
                         <div className={styles.listdiv}>
-                            <span>Craiglist</span>
+                            <span>weblisted</span>
                             <ul className={styles.footerul}>
                                 <li>Digital Payments </li>
                                 <li>Daraz Cares </li>

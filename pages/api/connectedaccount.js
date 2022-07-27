@@ -1,4 +1,4 @@
-const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
+const stripe = require("stripe")(`${process.env.STRIPE_SECRET_KEY}`)
 export default async(req, res)=> {
     const {email}=req.body;
     const account = await stripe.accounts.create({
@@ -34,8 +34,8 @@ export default async(req, res)=> {
       );
       const accountLink = await stripe.accountLinks.create({
         account: account.id,
-        success_url:`${process.env.HOST}/ResturentOwner`,
-        failure_url:`${process.env.HOST}/Main_login`,
+        success_url:`${process.env.HOST}/Dashboard/SellerDashboard`,
+        failure_url:`${process.env.HOST}/`,
         type: 'account_onboarding',
       });
     //   console.log(JSON.stringify(account.id,null,2),'account')

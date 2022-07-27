@@ -12,7 +12,7 @@ export default function () {
             </button>
             <div class="collapse navbar-collapse justify-content-center" id={styles.navbarCollapse}>
                 <div class="navbar-nav">
-                    <a href="/" class="nav-item nav-link text-uppercase mx-1" id={styles.navlist}>CL</a>
+                    <a href="/" class="nav-item nav-link text-uppercase mx-1" id={styles.navlist}>WL</a>
                     <a href="" class="nav-item nav-link text-uppercase mx-1" id={styles.navlist}>Indoor</a>
                     <a href="" class="nav-item nav-link text-uppercase mx-1" id={styles.navlist}>Job</a>
                     <a href="" class="nav-item nav-link text-uppercase mx-1" id={styles.navlist}>Science / Biotech</a>

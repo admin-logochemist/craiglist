@@ -9,7 +9,7 @@ export default function Header() {
         <div className='container-fluid' id={styles.header}>
             <div className='row' id={styles.row_header}>
                 <div className='col-6' id={styles.head_name}>
-                    <span id={styles.name_span}><a href="/">CL</a></span> &nbsp;&nbsp;
+                    <span id={styles.name_span}><a href="/">WL</a></span> &nbsp;&nbsp;
 
                 </div>
                 <div className='col 6' >
