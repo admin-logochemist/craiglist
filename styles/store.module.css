@@ -88,6 +88,9 @@
 .image{
     height: 100px;
 }
+.imgsize{
+    height: 200px;
+}
 .cart{
     margin-top: 5px;
     margin-left: 10px;
@@ -121,6 +124,7 @@
 }
 .mallborder{
     border-top: 2px solid white;
+    margin-top: 20px;
     display: flex;
    
 }
@@ -132,10 +136,20 @@
 }
 
 #Mall h5{
-    color: #3a8cd8;
+    color: #ffffff;
+    background-color: #0055f3;
+    height: 30px;
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #Mall{
     background: #ffffff;
+    margin-top: 20px;
+    padding: 20px;
+    /* border: solid 0.5px rgb(65, 65, 65); */
+    box-shadow: 5px 5px 10px 5px grey;
 }
 .catimg{
  height: 80px;
@@ -511,5 +525,14 @@ justify-content: center;
     text-transform: capitalize;
     font-weight: 800;
     font-size: 20px;
+    margin-left: 18px;
 
+}
+.spaciz{
+    display: flex;
+    justify-content: space-around;
+}
+
+.btzxp{
+    width: 40%;
 }
