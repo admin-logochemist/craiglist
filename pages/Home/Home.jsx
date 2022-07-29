@@ -23,15 +23,13 @@ function Home() {
          
         </div>
       </div>
-    {/*  <div className="row">
-        <div className="col-lg-6" id={`${styles.homeWidgets}`}>
-          <WidgetSm />
-        </div>  
-        <div className="col-lg-6" id={`${styles.homeWidgets}`}>
-          <WidgetLg />
+  <div className="row">
+      
+        <div className="col-lg-12" id={`${styles.homeWidgets}`}>
+         
         </div>
 
-  </div> */}
+  </div> 
 
     </div>
   </>

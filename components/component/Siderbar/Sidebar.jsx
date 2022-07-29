@@ -16,6 +16,7 @@ import {
     Menu
 } from '@material-ui/icons'
 import DashboardProductAddForm from '../DashboardProductAddForm/DashboardProductAddForm'
+import Link from 'next/Link';
 
 function Sidebar() {
 
@@ -43,7 +44,7 @@ function Sidebar() {
                                 </span>
                                  <span  className={styles.sidebarListitem}>
                                     <TrendingUp className={styles.sidebarIcon} />
-                                    Sales
+                                   <Link href="/Dashboard/Sales">Sales</Link>
                                 </span>
                             </ul>
                         </div>

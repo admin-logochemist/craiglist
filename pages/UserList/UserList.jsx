@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../../styles/UserList.module.css';
+import styles from '../../styles/UserDetails.module.css';
 import { DataGrid } from '@mui/x-data-grid';
 
 
