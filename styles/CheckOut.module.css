@@ -14,7 +14,7 @@
     margin: auto;
     max-width: 950px;
     width: 90%;
-    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.9);
     border-radius: 1rem;
     border: transparent;
 }
@@ -24,7 +24,7 @@
     }
 }
 #cart{
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.311);
     padding: 4vh 5vh;
     border-bottom-left-radius: 1rem;
     border-top-left-radius: 1rem;
@@ -60,7 +60,7 @@
     margin: 0;
 }
 .title b{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 .main{
     margin: 0;
@@ -119,7 +119,7 @@
     color: white;
     width: 100%;
     font-size: 0.7rem;
-    margin-top: 4vh;
+    margin-top: 3vh;
     padding: 1vh;
     border-radius: 0;
 }
@@ -147,4 +147,7 @@
     background-repeat: no-repeat;
     background-position-x: 95%;
     background-position-y: center;
+}
+#bodyz{
+    margin-top: 80px;
 }

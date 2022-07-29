@@ -7,7 +7,7 @@ import CheckoutPro from './CheckoutPro'
 import { selectItems, selectTotal } from '../components/features/BasketSlice';
 import { useSelector } from 'react-redux'
 import HeaderStore from '../components/component/HeaderStore';
- import { Elements } from '@stripe/react-stripe-js';
+//  import { Elements } from '@stripe/react-stripe-js';
  import { loadStripe } from '@stripe/stripe-js';
 import axios from 'axios';
 function CheckOut() {
@@ -47,6 +47,7 @@ setUsersEmail(((usersemail!==null)&&(usersemail!==undefined)) ? usersemail : "Lo
     return (
         <>
         <HeaderStore/>
+        <div className='container' id={styles.bodyz}>
         <div className={styles.card} >
       
         <div className="row" id={styles.row}>
@@ -95,6 +96,7 @@ setUsersEmail(((usersemail!==null)&&(usersemail!==undefined)) ? usersemail : "Lo
             </div>
         </div>
         
+    </div>
     </div>
     </>
     )
