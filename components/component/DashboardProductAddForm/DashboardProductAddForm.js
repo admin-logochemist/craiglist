@@ -83,7 +83,7 @@ function DashboardProductAddForm() {
                   const downloadUrl = await getDownloadURL(ImageRef);
                   await updateDoc(doc(db, "addProduct", docRef.id), {
                       image: downloadUrl,
-                      productId:docRef.id
+                      itemid:docRef.id
                   })
               }
 
