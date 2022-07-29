@@ -18,6 +18,7 @@ function DashboardProductAddForm() {
   const [ProductData, setProductData] = useState([]);
   const [file, setFile] = useState('');
   const [category, setCategory] = useState([]);
+  const [categoryId, setCategoryId] = useState();
   const [flag, setFlag] = useState(false)
   var data = [];
   const getProduct = async () => {
@@ -40,6 +41,7 @@ function DashboardProductAddForm() {
   }, [])
   const handleCapacity = (e) => {
       setCategory(e.target.value);
+      setCategoryId(e.target.id);
 
   }
   const addInagetoPost = (e) => {
@@ -64,6 +66,7 @@ function DashboardProductAddForm() {
               width: width,
               height: height,
               category: category,
+              categoryId : categoryId,
               remail: "ghayas110@gmail.com",
               time: serverTimestamp(),
           })
@@ -80,7 +83,7 @@ function DashboardProductAddForm() {
                   const downloadUrl = await getDownloadURL(ImageRef);
                   await updateDoc(doc(db, "addProduct", docRef.id), {
                       image: downloadUrl,
-                      itemid:docRef.id
+                      productId:docRef.id
                   })
               }
 
@@ -126,7 +129,7 @@ function DashboardProductAddForm() {
 
                             return (
 
-                                <option>{item.category}</option>
+                                <option id={item.itemid}>{item.category}</option>
 
                             )
                         })
