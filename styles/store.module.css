@@ -90,8 +90,19 @@
     height: 100px;
 }
 .imgsize{
+    height: 220px;
+    padding: 20px;
+}
+.imgsizelip{
     height: 200px;
 }
+.imgsizelip:hover {
+    /* border: solid 5px #656869;
+  transition: border-width 0.6s linear; */
+  transform: scale(1.2);
+
+}
+
 .cart{
     margin-top: 5px;
     width: 16%;

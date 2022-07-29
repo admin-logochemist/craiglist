@@ -19,7 +19,20 @@
 
 
 }
-
+.ratingstar > i{
+    color: #cbcb11;
+    text-align: center;
+}
+.ratingstar{
+    margin: 0 auto;
+}
+.reviews_sec_box .re_btn {
+    border: none;
+    font-size: 15px;
+    padding: 6px 26px;
+    border-radius: 9px;
+    letter-spacing: 1px;
+}
 .Carousel_Item{
 }
 

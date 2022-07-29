@@ -33,7 +33,6 @@ const signOut=()=>{
                 <div className="row">
                     <div className='col-lg-12' id={styles.col12}>
                         <img src="/weblisted-store-logo.png" alt="" className={styles.storelogo} />
-
                         <div className={styles.Searchdiv}>
                             <div className="form-control" id={styles.search}>
                                 <input type="text" placeholder='SEARCH' name="" id="" />

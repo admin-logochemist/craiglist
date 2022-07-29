@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from '../pages/Header'
 import ReactImageMagnify from 'react-image-magnify';
@@ -6,11 +6,65 @@ import styles from '../styles/Products.module.css'
 import ProductDetail from '../components/component/ProductDetail';
 import Reviews from '../components/component/Reviews';
 import { useSelector } from 'react-redux';
+import ReactStars from 'react-stars' 
 import { selectOpenResturant } from '.././components/features/ResSlice';
+import { db,storage } from '../firebase';
+import { getDocs,addDoc, collection, serverTimestamp, updateDoc,doc, onSnapshot, query,where } from 'firebase/firestore';
 import HeaderStore from '../components/component/HeaderStore';
 const Products = () => {
+    const [ review,setReview ] = useState("");
+    const [ question,setQuestion ] = useState("");
+    const [food, setFood] = useState("");
+    const [product, setProduct] = useState([]);
+    const [usersName, setUsersName ] = useState("");
+    const [rating, setRating] = useState(0);
+    const [resReviews, setResReviews] = useState();
+    const [userData, setUserData] = useState([])
+const datas=[]
+
+const getReviews = () => {
 
 
+    onSnapshot(
+        query(collection(db, "review"), where("id","==", selectResturant.id)), (snapshot) => {
+            setProduct(snapshot.docs)
+            console.log(snapshot.docs);
+        })
+};
+useEffect(() => {
+    getReviews()
+    const users = localStorage.getItem('displayName')
+    console.log(users,"local storage")
+    setUsersName(((users!==null)&&(users!==undefined)) ? users : "Login")
+}, [])
+    const handleSubmit = async (e) => {
+       
+        try {
+        const docRef=  await addDoc(collection(db, 'review'), {
+         review:review,
+         usersName:usersName,
+         ratings:rating,
+         id:selectResturant.id
+
+
+          })
+       
+        alert("Review submited")
+        } catch (err) {
+          alert(err)
+        }
+    }
+
+    const renderReviews = () => {
+
+        return product.map((item, index) => {
+            // eslint-disable-next-line react/jsx-key
+            return <Reviews
+                obj={item}
+            />
+
+        })
+    }
 
     const selectResturant = useSelector(selectOpenResturant)
     return (
@@ -64,7 +118,20 @@ const Products = () => {
                     <div className="col-lg-10" id={styles.ProductsDetails}>
                         <div className="row" >
                             <div className="col-lg-12">
-                                <Reviews />
+                            <div className={styles.ratingstar}>
+                            <h5 className="">{usersName}
+
+                            </h5>
+                            <ReactStars
+                                count={5}
+                                size={24}
+                                onChange={(e) => setRating(e)}
+                                color2={'#ffd700'} />
+                            <textarea id="w3review" name="w3review" rows="3" cols="45" value={review} onChange={(e)=>setReview(e.target.value)}> ss </textarea>
+
+                            <button className={styles.re_btn} onClick={handleSubmit}>Write a Review</button>
+                        </div>
+                        {renderReviews()}
                             </div>
                         </div>
                     </div>
