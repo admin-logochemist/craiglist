@@ -7,8 +7,8 @@ import CheckoutPro from './CheckoutPro'
 import { selectItems, selectTotal } from '../components/features/BasketSlice';
 import { useSelector } from 'react-redux'
 import HeaderStore from '../components/component/HeaderStore';
-// import { Elements } from '@stripe/react-stripe-js';
-// import { loadStripe } from '@stripe/stripe-js';
+//  import { Elements } from '@stripe/react-stripe-js';
+ import { loadStripe } from '@stripe/stripe-js';
 import axios from 'axios';
 function CheckOut() {
     const items = useSelector(selectItems);
@@ -47,6 +47,7 @@ setUsersEmail(((usersemail!==null)&&(usersemail!==undefined)) ? usersemail : "Lo
     return (
         <>
         <HeaderStore/>
+        <div className='container' id={styles.bodyz}>
         <div className={styles.card} >
       
         <div className="row" id={styles.row}>
@@ -69,11 +70,12 @@ setUsersEmail(((usersemail!==null)&&(usersemail!==undefined)) ? usersemail : "Lo
                     quantity={item?.quantity ? item?.quantity : 1}
                     price_total={item.price_total||''}
                     description={item?.description}
+                    itemid={item?.itemid}
                    
                 />
                 }
                 ) : null}
-                {console.log("CartItems",items[0].price_total)}
+               
                 </div>
                
                 <div className={styles.back_to_shop}><a href="#"><FontAwesomeIcon icon={faArrowCircleLeft } /></a><span className="text-muted">Back to shop</span></div>
@@ -94,6 +96,7 @@ setUsersEmail(((usersemail!==null)&&(usersemail!==undefined)) ? usersemail : "Lo
             </div>
         </div>
         
+    </div>
     </div>
     </>
     )

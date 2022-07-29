@@ -16,6 +16,8 @@ import { selectItems } from '../components/features/BasketSlice';
 import Link from 'next/link'
 import ReactStars from 'react-stars'
 import HeaderStore from '../components/component/HeaderStore';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 function Store() {
     const items = useSelector(selectItems);
     const [product, setProduct] = useState([]);
@@ -24,75 +26,75 @@ function Store() {
         [
             {
                 text: 'soap1',
-                image: 'image1',
+                image: 'https://images.philips.com/is/image/PhilipsConsumer/TAKH402PK_00-IMS-en_PK?$jpglarge$&wid=1250',
                 content: "Some quick example text to build on the card title and make up the bulk of the cards content."
             }
             ,
             {
                 text: 'rope2',
-                image: 'image2',
+                image: 'https://media1.popsugar-assets.com/files/thumbor/yB0aMusFqZ55vNPX2GmL-aePMPQ/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2021/03/29/961/n/1922507/62692a665eb11019_netimg5NIAFJ/i/Fun-Print-Vizliter-TWS-Deep-Bass-Wireless-Headphones-50.jpg',
                 content: "Some quick example text to build on the card title and make up the bulk of the cards content."
             }
             ,
             {
                 text: 'rope3',
-                image: 'image3',
+                image: 'https://www.czone.com.pk/images/thumbnails-large/1-czone.com.pk-1540-10975-280121091957-1540-10975-050421043210.jpg',
                 content: "Some quick example text to build on the card title and make up the bulk of the cards content."
             }
             ,
             {
                 text: 'rope4',
-                image: 'image4',
+                image: 'https://allmytech.pk/wp-content/uploads/2020/02/wh-xb700-blue-square.jpg',
                 content: "Some quick example text to build on the card title and make up the bulk of the cards content."
             }
             ,
             {
                 text: 'rope5',
-                image: 'image5',
+                image: 'http://sc04.alicdn.com/kf/H965d4d7fd5384d7396744d047413ce6bj.png',
                 content: "Some quick example text to build on the card title and make up the bulk of the cards content."
             }
             ,
             {
                 text: 'rope6',
-                image: 'image2',
+                image: 'http://jrd-fixit.weebly.com/uploads/1/2/5/6/12563852/8891411_orig.jpg',
                 content: "Some quick example text to build on the card title and make up the bulk of the cards content."
             }
             ,
             {
                 text: 'rope6',
-                image: 'image2',
+                image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtwQ70LT96EAZUa_yguXSx6X2KNDH5PYQhDg&usqp=CAU',
                 content: "Some quick example text to build on the card title and make up the bulk of the cards content."
             }
             ,
             {
                 text: 'rope6',
-                image: 'image2',
+                image: 'http://cdn.shopify.com/s/files/1/0536/4803/1936/products/61laGENJKfL._SL1200.jpg?v=1651917031',
                 content: "Some quick example text to build on the card title and make up the bulk of the cards content."
             }
             ,
-            {
-                text: 'rope6',
-                image: 'image2',
-                content: "Some quick example text to build on the card title and make up the bulk of the cards content."
-            }
-            ,
-            {
-                text: 'rope6',
-                image: 'image2',
-                content: "Some quick example text to build on the card title and make up the bulk of the cards content."
-            }
-            ,
-            {
-                text: 'rope6',
-                image: 'image2',
-                content: "Some quick example text to build on the card title and make up the bulk of the cards content."
-            }
-            ,
-            {
-                text: 'rope6',
-                image: 'image2',
-                content: "Some quick example text to build on the card title and make up the bulk of the cards content."
-            }
+            // {
+            //     text: 'rope6',
+            //     image: 'image2',
+            //     content: "Some quick example text to build on the card title and make up the bulk of the cards content."
+            // }
+            // ,
+            // {
+            //     text: 'rope6',
+            //     image: 'image2',
+            //     content: "Some quick example text to build on the card title and make up the bulk of the cards content."
+            // }
+            // ,
+            // {
+            //     text: 'rope6',
+            //     image: 'image2',
+            //     content: "Some quick example text to build on the card title and make up the bulk of the cards content."
+            // }
+            // ,
+            // {
+            //     text: 'rope6',
+            //     image: 'image2',
+            //     content: "Some quick example text to build on the card title and make up the bulk of the cards content."
+            // }
 
         ]
 
@@ -140,41 +142,52 @@ function Store() {
         [
             {
                 text: 'Mini Hair  Straightener And Straightener | Mini Hair.. ',
-                image: 'image1',
+                image: 'https://thumbs.dreamstime.com/b/composition-variety-grocery-products-white-background-31618939.jpg',
                 content: "Some quick example text to build on the card title and make up the bulk of the cards content."
             }
             ,
             {
                 text: 'Mini Hair  Straightener And Straightener | Mini Hair. 2',
-                image: 'image2',
+                image: 'https://media.gettyimages.com/photos/unbranded-canned-goods-conserves-sauces-and-oils-picture-id168383797?s=612x612',
                 content: "Some quick example text to build on the card title and make up the bulk of the cards content."
             }
             ,
             {
                 text: 'Mini Hair  Straightener And Straightener | Mini Hair..3',
-                image: 'image3',
+                image: 'https://previews.123rf.com/images/belchonock/belchonock1804/belchonock180430008/98944480-different-cooking-utensils-on-white-background.jpg',
                 content: "Some quick example text to build on the card title and make up the bulk of the cards content."
             }
             ,
             {
                 text: 'Mini Hair  Straightener And Straightener | Mini Hair..4',
-                image: 'image4',
+                image: 'https://img.freepik.com/premium-vector/set-kitchen-utensils-isolated-vector-illustration-white-background_125494-1090.jpg?w=2000',
                 content: "Some quick example text to build on the card title and make up the bulk of the cards content."
             }
             ,
             {
                 text: 'Mini Hair  Straightener And Straightener | Mini Hair..5',
-                image: 'image5',
+                image: 'https://s3.envato.com/files/348051170/cc46.jpg',
                 content: "Some quick example text to build on the card title and make up the bulk of the cards content."
             }
             ,
             {
                 text: 'Mini Hair  Straightener And Straightener | Mini Hair..6',
-                image: 'image2',
+                image: 'https://elements-twenty20-photos-0.imgix.net/production/uploads/items/d5b18cdf-39e6-4dd1-b33d-9fc3aa3a36e0/source?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=700&s=2d57e6ffa963791127efbd06c7d9fe56',
                 content: "Some quick example text to build on the card title and make up the bulk of the cards content."
             }
-
-
+            ,
+            {
+                text: 'Mini Hair  Straightener And Straightener | Mini Hair..6',
+                image: 'https://media.istockphoto.com/photos/brown-antique-table-with-round-table-top-picture-id131936828?k=20&m=131936828&s=612x612&w=0&h=nHlkXsyAuvGgSZ7FJNBHQd8XHXDPzWQfCzz816KxXnk=',
+                content: "Some quick example text to build on the card title and make up the bulk of the cards content."
+            }
+            ,
+            {
+                text: 'Mini Hair  Straightener And Straightener | Mini Hair..6',
+                image: 'https://media.istockphoto.com/photos/concept-of-product-categories-furniture-and-decor-on-white-background-picture-id1135527778',
+                content: "Some quick example text to build on the card title and make up the bulk of the cards content."
+            }
+           
         ]
 
     useEffect(() => {
@@ -197,7 +210,7 @@ function Store() {
 
 
         onSnapshot(
-            query(collection(db, "addProduct"), where("category", "==", "gigOffered")), (snapshot) => {
+            query(collection(db, "addProduct")), (snapshot) => {
                 setProduct(snapshot.docs)
                 console.log(snapshot.docs);
             })
@@ -328,51 +341,61 @@ function Store() {
                     </div>
                 </div>
             </div>
+
+          
+
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12 col-md-12 col-sm-12 mt-5" id={styles.Mall}>
-                        <h5>weblisted MALL</h5>
+                        <h5>WEBLISTED MALL</h5>
                         <div className={styles.mallborder}>
                             {objArrz.map((items, index) => (
                                 <div className={styles.cart}>
                                     <img src="/cartpic.jpg" alt="" />
                                     <span>{items.text}</span>
                                     <span className={styles.text}>$:5</span>
+                                    <Button>Add To cart</Button>
                                 </div>))}
-                            {/* <div className={styles.cart}>
-                                <img src="/cartpic.jpg" alt="" />
-                                <span>mini bluethoot</span>
-                                <span className={styles.text}>$:5</span>
-                            </div>
-                            <div className={styles.cart}>
-                                <img src="/cartpic.jpg" alt="" />
-                                <span>mini bluethoot</span>
-                                <span className={styles.text}>$:5</span>
-                            </div>
-                            <div className={styles.cart}>
-                                <img src="/cartpic.jpg" alt="" />
-                                <span>mini bluethoot</span>
-                                <span className={styles.text}>$:5</span>
-                            </div>
-                            <div className={styles.cart}>
-                                <img src="/cartpic.jpg" alt="" />
-                                <span>mini bluethoot</span>
-                                <span className={styles.text}>$:5</span>
-                            </div>
-                            <div className={styles.cart}>
-                                <img src="/cartpic.jpg" alt="" />
-                                <span>mini bluethoot</span>
-                                <span className={styles.text}>$:5</span>
-                            </div>*/}
+                         
 
                         </div>
                     </div>
                 </div>
             </div>
 
+            <div className='container' id={styles.Mall}>
+            <h5>CATEGORY</h5>
+                <div className='row'>
+                {objArr.map((items, index) => (
+                    <div className='col'>
+                        <Card style={{ width: '18rem', marginTop: '1rem' }}>
+                            <Card.Img className={styles.imgsize} variant="top" src={items.image}/>
+                            <Card.Body>
+                                <Card.Title>{items.text}</Card.Title>
+                                <Card.Title>Price 50$</Card.Title>
+                                <Card.Text>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias omnis 
+                                      </Card.Text>
+                                <ReactStars
+                                count={5}
+                                size={24}
+                                value={5}
+                                color2={'#ffd700'} />
+                                <div className={styles.spaciz}>
+                                <Button className={styles.btzxp} variant="primary">Add to cart</Button>
+                                <Button className={styles.btzxp} variant="primary">View item</Button>
+                                </div>
+                            </Card.Body>
+                        </Card>
+                       
+                    </div>
+                    ))}
+                </div>
+            </div>
 
 
-            <div className="container">
+
+                {/*   <div className="container">
 
 
                 <div className="row mt-5" id={styles.catrow}>
@@ -385,6 +408,8 @@ function Store() {
                                 <div className='col' id={styles.col}>
                                     <img src="/category.png" alt="" className={styles.catimg} />
                                     <span>{items.text}</span>
+                                    <Button>Add To Cart</Button>
+                                    <Button>View</Button>
                                 </div>
 
                             ))}
@@ -394,36 +419,72 @@ function Store() {
 
                 </div>
 
-            </div>
+                            </div>*/}
 
 
 
-            <div className="container">
-                <div className="row mt-4" id={styles.forsale}>
-                    <h3>FOR SALE</h3>
-                    {forSale.map((items, index) =>
-                        <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
-
-                            <div className={styles.forsaleCart}>
-                                <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
-                                <div className={styles.FsaleCart}>
-                                    <span>{items.text}</span><br />
-                                    <span className={styles.cartPrice}>$ 99</span> <br />
+            <div className='container' id={styles.Mall}>
+                <h5>FOR SALE</h5>
+                <div className='row'>
+                    {forSale.map((items, index) => (
+                        <div className='col'>
+                            <Card style={{ width: '18rem', marginTop: '1rem' }}>
+                                <Card.Img className={styles.imgsize} variant="top" src={items.image} />
+                                <Card.Body>
+                                    <Card.Title>{items.text}</Card.Title>
+                                    <Card.Title>Price 50$</Card.Title>
+                                    <Card.Text>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias omnis 
+                                </Card.Text>
                                     <ReactStars
                                         count={5}
                                         size={24}
                                         value={5}
                                         color2={'#ffd700'} />
-                                </div>
-                            </div>
+                                    <div className={styles.spaciz}>
+                                        <Button className={styles.btzxp} variant="primary">Add to cart</Button>
+                                        <Button className={styles.btzxp} variant="primary">View item</Button>
+                                    </div>
+                                </Card.Body>
+                            </Card>
 
                         </div>
-                    )}
-
+                    ))}
                 </div>
             </div>
 
-            <div className="container">
+            <div className='container' id={styles.Mall}>
+            <h5>FEATURED PRODUCTS</h5>
+            <div className='row'>
+                {forSale.map((items, index) => (
+                    <div className='col'>
+                        <Card style={{ width: '18rem', marginTop: '1rem' }}>
+                            <Card.Img className={styles.imgsize} variant="top" src={items.image} />
+                            <Card.Body>
+                                <Card.Title>{items.text}</Card.Title>
+                                <Card.Title>Price 50$</Card.Title>
+                                <Card.Text>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias omnis 
+                            </Card.Text>
+                                <ReactStars
+                                    count={5}
+                                    size={24}
+                                    value={5}
+                                    color2={'#ffd700'} />
+                                <div className={styles.spaciz}>
+                                    <Button className={styles.btzxp} variant="primary">Add to cart</Button>
+                                    <Button className={styles.btzxp} variant="primary">View item</Button>
+                                </div>
+                            </Card.Body>
+                        </Card>
+
+                    </div>
+                ))}
+            </div>
+        </div>
+
+
+          {/*  <div className="container">
                 <div className="row mt-4" id={styles.forsale}>
                     {forSale.map((items, index) =>
                         <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
@@ -432,17 +493,21 @@ function Store() {
                                 <div className={styles.FsaleCart}>
                                     <span>{items.text}</span><br />
                                     <span className={styles.cartPrice}>$ 99</span> <br />
+                                    <button>Add To cart</button>
+                                    <button>View</button>
                                     <ReactStars
                                         count={5}
                                         size={24}
                                         value={3}
                                         color2={'#ffd700'} />
+                                        
                                 </div>
+                               
                             </div>
                         </div>
                     )}
                 </div>
-            </div>
+                    </div>
 
             <div className="container">
                 <div className="row mt-4" id={styles.forsale}>
@@ -453,6 +518,8 @@ function Store() {
                                 <div className={styles.FsaleCart}>
                                     <span>{items.text}</span><br />
                                     <span className={styles.cartPrice}>$ 99</span> <br />
+                                    <button>Add To cart</button>
+                                    <button>View</button>
                                     <ReactStars
                                         count={5}
                                         size={24}
@@ -464,7 +531,7 @@ function Store() {
                     )}
 
                 </div>
-            </div>
+            </div>*/}
 
             <div className="container-fluid">
                 <div className="row mt-4" id={styles.footrtstore}>
@@ -476,20 +543,20 @@ function Store() {
                                 <li>How to Buy</li>
                                 <li>Corporate & Bulk Purchasing</li>
                                 <li>Returns & Refunds</li>
-                                <li>Weblisted Shop</li>
+                                <li>weblisted Shop</li>
                                 <li>Contact Us</li>
                                 <li>Purchase Protection</li>
-                                <li>Weblisted Pick up Points</li>
-                                <li>Fulfilled by Weblisted FBD</li>
+                                <li>weblisted Pick up Points</li>
+                                <li>Fulfilled by weblisted FBD</li>
                             </ul>
                             <br />
                         </div>
                         <div className={styles.listdiv}>
                             <span>Make Money With Us</span>
                             <ul className={styles.footerul}>
-                                <li>Weblisted University </li>
-                                <li>Sell on Weblisted</li>
-                                <li>Join Weblisted Affiliate Program</li>
+                                <li>weblisted University </li>
+                                <li>Sell on weblisted</li>
+                                <li>Join weblisted Affiliate Program</li>
                             </ul>
 
                         </div>
@@ -499,15 +566,15 @@ function Store() {
                             <span>weblisted</span>
                             <ul className={styles.footerul}>
                                 <li>Digital Payments </li>
-                                <li>Weblisted Cares </li>
-                                <li>Weblisted Blog </li>
+                                <li>weblisted Cares </li>
+                                <li>weblisted Blog </li>
                                 <li>Terms & Conditions</li>
                                 <li>Privacy Policy</li>
                                 <li>Privacy Policy</li>
                                 <li>Online Shopping App</li>
                                 <li>Online Grocery Shopping</li>
-                                <li>Weblisted Exclusive</li>
-                                <li> How to shop on Weblisted</li>
+                                <li>weblisted Exclusive</li>
+                                <li> How to shop on weblisted</li>
                             </ul>
                         </div>
 

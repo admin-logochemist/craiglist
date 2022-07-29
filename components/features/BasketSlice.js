@@ -61,18 +61,14 @@ export const basketSlice = createSlice({
 
                    let newBasket = [...state.items];
                    let currentCounter = newBasket[index].quantity;
-                   (newBasket[index].quantity === undefined ? currentCounter = 2
-                    : (++currentCounter) )
-                    newBasket[index].quantity = currentCounter;
-                    newBasket[index].price_total = newBasket[index].quantity * newBasket[index].price
-                    state.items = newBasket;
+                 
                 
        
 
 
 
             if (action.payload.itemAction === true) {
-                (newBasket[index].quantity === undefined ? currentCounter = 2
+                (newBasket[index].quantity === undefined ? currentCounter = 1
                     : (++currentCounter) )
                 newBasket[index].quantity = currentCounter;
                 newBasket[index].price_total = newBasket[index].quantity * newBasket[index].price
@@ -87,7 +83,7 @@ export const basketSlice = createSlice({
                 console.log(newBasket[index], "remove")
             }
 
-            console.log(current(state.items), "mai data hn")
+         
 
 
 

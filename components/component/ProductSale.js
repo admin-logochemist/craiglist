@@ -12,6 +12,7 @@ function ProductSale({obj}) {
     const openResturant=()=>{
         let payload = obj
          dispatch(selectResturant(payload));
+         router.push('/Products', obj)
 console.log(obj)
       }
       const addItemsToBasket =  () => {
@@ -43,6 +44,7 @@ console.log(obj)
     <span>{obj.data().title}</span>
     <span className={styles.text}>{obj.data().price}</span>
     <button  onClick={addItemsToBasket}>Add To Cart</button>
+    <button onClick={openResturant}>See More</button>
 </div>
   )
 }

@@ -35,20 +35,23 @@ const signOut=()=>{
                         <img src="/weblisted-store-logo.png" alt="" className={styles.storelogo} />
 
                         <div className={styles.Searchdiv}>
-                            <div className="form-control " id={styles.search}>
+                            <div className="form-control" id={styles.search}>
                                 <input type="text" placeholder='SEARCH' name="" id="" />
                                 <FontAwesomeIcon icon={faSearch} className={styles.icon} />
                             </div>
-                            {((usersName!==null)&&(usersName!=="")) ?
-                            <p onClick={signOut} className={styles.a_1}>
-                            {usersName}
-                            <br/>
-                             <button className={styles.logoutbtn}>Logout </button>
-                          </p>
-                            : 
-                            <a href="/SignIn" className={styles.a_1}>
-                            Login
-                            </a> }
+                           
+                        </div>
+                        <div className={styles.colz}>
+                        {((usersName!==null)&&(usersName!=="")) ?
+                        <p onClick={signOut} className={styles.a_1}>
+                        {usersName}
+                        <br/>
+                         <button className={styles.logoutbtn}>Logout </button>
+                      </p>
+                        : 
+                        <a href="/SignIn" className={styles.a_1}>
+                        Login
+                        </a> }
                         </div>
                         <div className={styles.storeAddProduct}>
                        
