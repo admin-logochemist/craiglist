@@ -197,7 +197,7 @@ function Store() {
 
 
         onSnapshot(
-            query(collection(db, "addProduct"), where("category", "==", "gigOffered")), (snapshot) => {
+            query(collection(db, "addProduct")), (snapshot) => {
                 setProduct(snapshot.docs)
                 console.log(snapshot.docs);
             })
@@ -476,20 +476,20 @@ function Store() {
                                 <li>How to Buy</li>
                                 <li>Corporate & Bulk Purchasing</li>
                                 <li>Returns & Refunds</li>
-                                <li>Daraz Shop</li>
+                                <li>weblisted Shop</li>
                                 <li>Contact Us</li>
                                 <li>Purchase Protection</li>
-                                <li>Daraz Pick up Points</li>
-                                <li>Fulfilled by Daraz FBD</li>
+                                <li>weblisted Pick up Points</li>
+                                <li>Fulfilled by weblisted FBD</li>
                             </ul>
                             <br />
                         </div>
                         <div className={styles.listdiv}>
                             <span>Make Money With Us</span>
                             <ul className={styles.footerul}>
-                                <li>Daraz University </li>
-                                <li>Sell on Daraz</li>
-                                <li>Join Daraz Affiliate Program</li>
+                                <li>weblisted University </li>
+                                <li>Sell on weblisted</li>
+                                <li>Join weblisted Affiliate Program</li>
                             </ul>
 
                         </div>
@@ -499,15 +499,15 @@ function Store() {
                             <span>weblisted</span>
                             <ul className={styles.footerul}>
                                 <li>Digital Payments </li>
-                                <li>Daraz Cares </li>
-                                <li>Daraz Blog </li>
+                                <li>weblisted Cares </li>
+                                <li>weblisted Blog </li>
                                 <li>Terms & Conditions</li>
                                 <li>Privacy Policy</li>
                                 <li>Privacy Policy</li>
                                 <li>Online Shopping App</li>
                                 <li>Online Grocery Shopping</li>
-                                <li>Daraz Exclusive</li>
-                                <li> How to shop on Daraz</li>
+                                <li>weblisted Exclusive</li>
+                                <li> How to shop on weblisted</li>
                             </ul>
                         </div>
 
