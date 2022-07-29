@@ -476,20 +476,20 @@ function Store() {
                                 <li>How to Buy</li>
                                 <li>Corporate & Bulk Purchasing</li>
                                 <li>Returns & Refunds</li>
-                                <li>Daraz Shop</li>
+                                <li>Weblisted Shop</li>
                                 <li>Contact Us</li>
                                 <li>Purchase Protection</li>
-                                <li>Daraz Pick up Points</li>
-                                <li>Fulfilled by Daraz FBD</li>
+                                <li>Weblisted Pick up Points</li>
+                                <li>Fulfilled by Weblisted FBD</li>
                             </ul>
                             <br />
                         </div>
                         <div className={styles.listdiv}>
                             <span>Make Money With Us</span>
                             <ul className={styles.footerul}>
-                                <li>Daraz University </li>
-                                <li>Sell on Daraz</li>
-                                <li>Join Daraz Affiliate Program</li>
+                                <li>Weblisted University </li>
+                                <li>Sell on Weblisted</li>
+                                <li>Join Weblisted Affiliate Program</li>
                             </ul>
 
                         </div>
@@ -499,15 +499,15 @@ function Store() {
                             <span>weblisted</span>
                             <ul className={styles.footerul}>
                                 <li>Digital Payments </li>
-                                <li>Daraz Cares </li>
-                                <li>Daraz Blog </li>
+                                <li>Weblisted Cares </li>
+                                <li>Weblisted Blog </li>
                                 <li>Terms & Conditions</li>
                                 <li>Privacy Policy</li>
                                 <li>Privacy Policy</li>
                                 <li>Online Shopping App</li>
                                 <li>Online Grocery Shopping</li>
-                                <li>Daraz Exclusive</li>
-                                <li> How to shop on Daraz</li>
+                                <li>Weblisted Exclusive</li>
+                                <li> How to shop on Weblisted</li>
                             </ul>
                         </div>
 

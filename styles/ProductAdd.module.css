@@ -1,5 +1,6 @@
 .productAddHeading{
     text-align: center;
+  
 }
 #ProductAddForm{
     display: flex !important;
@@ -9,4 +10,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.ProductAdd{
+    overflow-x: hidden;
 }

@@ -785,33 +785,33 @@ const handleSubmit = () => {
                   Asia Pacific
                 </span> <br />
                 <select id="" className={styles.home_select} onClick={handleCapacity}>
-                  <option value="adelaide"> adelaide</option>
-                  <option value="bangladesh"> bangladesh</option>
-                  <option value="beijing"> beijing</option> 
-                  <option value="brisbane">brisbane</option>
-                  <option value="canberra">canberra</option>
-                  <option value="christchurch">christchurch</option>
-                  <option value="darwin">darwin</option>
-                  <option value="guangzhou">guangzhou</option>
-                  <option value="hangzhou"> hangzhou</option>
-                  <option value="hong kong">hong kong</option>
-                  <option value="indonesia">indonesia</option>
-                  <option value="malaysia"> malaysia</option>
-                  <option value="malaysia"> malaysia</option>
-                  <option value="melbourne">  melbourne</option>
-                  <option value="micronesia">  micronesia</option>
-                  <option value="osaka">osaka</option>
-                  <option value="perth">  perth</option>
-                  <option value="seoul"> seoul</option>
-                  <option value="shanghai"> shanghai</option>
-                  <option value="singapore">  singapore</option>
-                  <option value="sydney">sydney</option>
-                  <option value="taiwan">taiwan</option>
-                  <option value="tasmania"> tasmania</option>
-                  <option value="thailand">thailand</option>
-                  <option value="tokyo"> tokyo</option>
+                  <option value="Austrailia"> Austrailia</option>
+                  <option value="bangladesh"> Bangladesh</option>
+                  <option value="Brunei"> Brunei</option> 
+                  <option value="Combodia">Combodia</option>
+                  <option value="Burma">Burma</option>
+                  <option value="Canada">Canada</option>
+                  <option value="China">China</option>
+                  <option value="Chile">Chile</option>
+                  <option value="Cooks Island"> Cooks Island</option>
+                  <option value="Fiji">Fiji</option>
+                  <option value="India">India</option>
+                  <option value="Malaysia"> Malaysia</option>
+                  <option value="Indonesia">Indonesia</option>
+                  <option value="Japan">Japan</option>
+                  <option value="Maldives">Maldives</option>
+                  <option value="Laos">Laos</option>
+                  <option value="Pakistan">Pakistan</option>
+                  <option value="North Korea">North Korea</option>
+                  <option value="New Zealand">New Zealand</option>
+                  <option value="Napal">Napal</option>
+                  <option value="Singapore">Singapore</option>
+                  <option value="Sri-Lanka">Sri-Lanka</option>
+                  <option value="Vietnam"> Vietnam</option>
+                  <option value="United State">United State</option>
+                  <option value="Russia"> Russia </option>
                   <option value="vietnam">vietnam</option>
-                  <option value="wellington"> wellington</option>
+                  <option value="Thailand"> Thailand</option>
 
                 </select>
               </div>
