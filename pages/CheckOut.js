@@ -1,4 +1,5 @@
 import React, { useState, useEffect }from 'react'
+import Header from '../pages/Header'
 import styles from '../styles/CheckOut.module.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import { faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
@@ -46,6 +47,7 @@ setUsersEmail(((usersemail!==null)&&(usersemail!==undefined)) ? usersemail : "Lo
     }
     return (
         <>
+        <Header />
         <HeaderStore/>
         <div className='container' id={styles.bodyz}>
         <div className={styles.card} >

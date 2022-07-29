@@ -9,6 +9,7 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import Carousel from 'react-bootstrap/Carousel';
 import ProductSale from '../components/component/ProductSale'
+import CategorySale from '../components/component/CategorySale'
 import { collection, onSnapshot, orderBy, query, where } from 'firebase/firestore';
 import { db, storage } from '../firebase';
 import { useSelector, useDispatch } from 'react-redux';
@@ -21,7 +22,7 @@ import Card from 'react-bootstrap/Card';
 function Store() {
     const items = useSelector(selectItems);
     const [product, setProduct] = useState([]);
-
+    const [category, setCategory] = useState([]);
     const objArr =
         [
             {
@@ -192,6 +193,7 @@ function Store() {
 
     useEffect(() => {
         getProduct()
+        getCategory()
 
     }, [])
 
@@ -205,13 +207,31 @@ function Store() {
 
         })
     }
+    const renderCategorySale = () => {
 
+        return category.map((item, index) => {
+            // eslint-disable-next-line react/jsx-key
+            return <CategorySale 
+                obj={item}
+            />
+
+        })
+    }
     const getProduct = () => {
 
 
         onSnapshot(
-            query(collection(db, "ProductCat")), (snapshot) => {
+            query(collection(db, "addProduct")), (snapshot) => {
                 setProduct(snapshot.docs)
+                console.log(snapshot.docs);
+            })
+    };
+    const getCategory = () => {
+
+
+        onSnapshot(
+            query(collection(db, "ProductCat")), (snapshot) => {
+                setCategory(snapshot.docs)
                 console.log(snapshot.docs);
             })
     };
@@ -331,16 +351,24 @@ function Store() {
             </div>
 
             <div className="container">
-                <div className="row">
-                    <div className="col-lg-12 col-md-12 col-sm-12 mt-5" id={styles.Mall}>
-                        <h5>FLAT SALE</h5>
-                        <div className="row">
-                            {renderProductSale()}
-                            {/*Add Conts*/}
-                        </div>
+            <div className="row">
+                <div className="col-lg-12 col-md-12 col-sm-12 mt-5" id={styles.Mall}>
+                    <h5>CATEGORY</h5>
+                    <div className="row">
+                      {renderCategorySale()}
+                        {/*Add Conts*/}
                     </div>
                 </div>
             </div>
+        </div>
+
+            <div className='container' id={styles.Mall}>
+            <h5>PRODUCTS</h5>
+                <div className='row'>
+                {renderProductSale()}
+                </div>
+            </div>
+           
 
           
 

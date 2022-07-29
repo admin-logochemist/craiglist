@@ -6,6 +6,7 @@ import { StarRate, ShareSharp, Favorite } from '@material-ui/icons'
 const ProductDetail = ({title,category,price,description}) => {
     return (
         <>
+        <HeaderStore/>
             <div>
                 <span className={styles.HeadingProduct}>{title}</span>
             </div>
