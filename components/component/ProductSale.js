@@ -5,6 +5,9 @@ import { useRouter } from 'next/router';
 import { useDispatch } from 'react-redux';
 import { addToBasket } from '../features/BasketSlice';
 import Router from 'next/router';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import ReactStars from 'react-stars'
 function ProductSale({obj}) {
     console.log(obj); 
     const router = useRouter();
@@ -39,13 +42,24 @@ console.log(obj)
       }
       console.log(obj);
   return (
-    <div className={styles.cart}>
-    <img src={obj.data().image} alt="" />
-    <span>{obj.data().title}</span>
-    <span className={styles.text}>{obj.data().price}</span>
-    <button  onClick={addItemsToBasket}>Add To Cart</button>
-    <button onClick={openResturant}>See More</button>
-</div>
+//     <div className={styles.cart}>
+//     <img src={obj.data().image} alt="" />
+//     <span>{obj.data().title}</span>
+//     <span className={styles.text}>{obj.data().price}</span>
+//     <button  onClick={addItemsToBasket}>Add To Cart</button>
+//     <button onClick={openResturant}>See More</button>
+// </div>
+    <>
+<div className='col' id={styles.imgsizelip}>
+      <Card style={{ width: '18rem', marginTop: '1rem' }}>
+        <Card.Img className={styles.imgsizelip} variant="top" src={obj.data().image} />
+        <Card.Body>
+          <Card.Title>{obj.data().category}</Card.Title>
+        </Card.Body>
+      </Card>
+      </div>
+    </>      
+
   )
 }
 

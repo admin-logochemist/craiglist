@@ -199,7 +199,7 @@ function Store() {
 
         return product.map((item, index) => {
             // eslint-disable-next-line react/jsx-key
-            return <ProductSale
+            return <ProductSale 
                 obj={item}
             />
 
@@ -210,7 +210,7 @@ function Store() {
 
 
         onSnapshot(
-            query(collection(db, "addProduct")), (snapshot) => {
+            query(collection(db, "ProductCat")), (snapshot) => {
                 setProduct(snapshot.docs)
                 console.log(snapshot.docs);
             })
@@ -331,10 +331,10 @@ function Store() {
             </div>
 
             <div className="container">
-                <div className="row" id={styles.Mall2}>
+                <div className="row">
                     <div className="col-lg-12 col-md-12 col-sm-12 mt-5" id={styles.Mall}>
                         <h5>FLAT SALE</h5>
-                        <div className={styles.mallborder}>
+                        <div className="row">
                             {renderProductSale()}
                             {/*Add Conts*/}
                         </div>
