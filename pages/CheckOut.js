@@ -70,11 +70,12 @@ setUsersEmail(((usersemail!==null)&&(usersemail!==undefined)) ? usersemail : "Lo
                     quantity={item?.quantity ? item?.quantity : 1}
                     price_total={item.price_total||''}
                     description={item?.description}
+                    itemid={item?.itemid}
                    
                 />
                 }
                 ) : null}
-                {console.log("CartItems",items[0].price_total)}
+               
                 </div>
                
                 <div className={styles.back_to_shop}><a href="#"><FontAwesomeIcon icon={faArrowCircleLeft } /></a><span className="text-muted">Back to shop</span></div>
