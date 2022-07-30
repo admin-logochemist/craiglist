@@ -192,6 +192,8 @@ function Store() {
         ]
 
     useEffect(() => {
+
+        
         getProduct()
         getCategory()
 
@@ -258,33 +260,6 @@ function Store() {
 
             </div>
             <HeaderStore />
-            {/*        <div className="container">
-                <div className="row">
-                    <div className='col-lg-12' id={styles.col12}>
-                        <img src="/weblisted-store-logo.png" alt="" className={styles.storelogo} />
-
-                        <div className={styles.Searchdiv}>
-                            <div className="form-control " id={styles.search}>
-                                <input type="text" placeholder='SEARCH' name="" id="" />
-                                <FontAwesomeIcon icon={faSearch} className={styles.icon} />
-                            </div>
-                        </div>
-                        <div className={styles.storeAddProduct}>
-                       
-                        <span>
-                        <Link to='/CheckOut'><FontAwesomeIcon icon={faCartShopping} className={styles.iconCart} /> </Link>
-                        
-                        </span>
-                        <button><a href="/ProductAdd/ProductAdd">Add product</a></button>
-                        </div>
-                        {items.length}
-
-                    </div>
-
-          
-                </div>
-            </div>
-    */}
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-md-12 col-sm-12 ">
@@ -421,36 +396,6 @@ function Store() {
                 </div>
             </div>
 
-
-
-                {/*   <div className="container">
-
-
-                <div className="row mt-5" id={styles.catrow}>
-                    <h5>CATEGORY</h5>
-
-                    <div className='col-md-12 col-lg-12 col-sm-12  col-xs-12' id={styles.category}>
-
-                        <div className="row">
-                            {objArr.map((items, index) => (
-                                <div className='col' id={styles.col}>
-                                    <img src="/category.png" alt="" className={styles.catimg} />
-                                    <span>{items.text}</span>
-                                    <Button>Add To Cart</Button>
-                                    <Button>View</Button>
-                                </div>
-
-                            ))}
-                        </div>
-
-                    </div>
-
-                </div>
-
-                            </div>*/}
-
-
-
             <div className='container' id={styles.Mall}>
                 <h5>FOR SALE</h5>
                 <div className='row'>
@@ -511,55 +456,6 @@ function Store() {
             </div>
         </div>
 
-
-          {/*  <div className="container">
-                <div className="row mt-4" id={styles.forsale}>
-                    {forSale.map((items, index) =>
-                        <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
-                            <div className={styles.forsaleCart}>
-                                <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
-                                <div className={styles.FsaleCart}>
-                                    <span>{items.text}</span><br />
-                                    <span className={styles.cartPrice}>$ 99</span> <br />
-                                    <button>Add To cart</button>
-                                    <button>View</button>
-                                    <ReactStars
-                                        count={5}
-                                        size={24}
-                                        value={3}
-                                        color2={'#ffd700'} />
-                                        
-                                </div>
-                               
-                            </div>
-                        </div>
-                    )}
-                </div>
-                    </div>
-
-            <div className="container">
-                <div className="row mt-4" id={styles.forsale}>
-                    {forSale.map((items, index) =>
-                        <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
-                            <div className={styles.forsaleCart}>
-                                <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
-                                <div className={styles.FsaleCart}>
-                                    <span>{items.text}</span><br />
-                                    <span className={styles.cartPrice}>$ 99</span> <br />
-                                    <button>Add To cart</button>
-                                    <button>View</button>
-                                    <ReactStars
-                                        count={5}
-                                        size={24}
-                                        value={4}
-                                        color2={'#ffd700'} />
-                                </div>
-                            </div>
-                        </div>
-                    )}
-
-                </div>
-            </div>*/}
 
             <div className="container-fluid">
                 <div className="row mt-4" id={styles.footrtstore}>
