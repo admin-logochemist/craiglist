@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import styles from '../../styles/store.module.css'
 import { selectResturant } from '../features/ResSlice';
 import { useRouter } from 'next/router';
@@ -8,10 +8,29 @@ import Router from 'next/router';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import ReactStars from 'react-stars'
+import ProductList from '../../pages/ProductList';
 function CategorySale({obj}) {
     console.log(obj); 
     const router = useRouter();
     const  dispatch = useDispatch();
+    const [category, setCategory] = useState();
+
+    const ProductCategory = (e) => { 
+      // setSubcat(e.target.id)
+      // console.log(e.target.id)
+      router.push({ pathname: '/ProductList', query: {  ProductCategory: e} })
+    }
+
+
+    const handleCapacity=(e)=>{
+      setCategory(e.target.value);
+    }
+
+
+
+
+
+
     const openResturant=()=>{
         let payload = obj
          dispatch(selectResturant(payload));
@@ -51,10 +70,12 @@ console.log(obj)
 // </div>
     <>
 <div className='col' id={styles.imgsizelip}>
-      <Card style={{ width: '18rem', marginTop: '1rem' }}>
+      <Card style={{ width: '18rem', marginTop: '1rem', cursor:'pointer' }}
+      
+      >
         <Card.Img className={styles.imgsizelip} variant="top" src={obj.data().image} />
         <Card.Body>
-          <Card.Title>{obj.data().category}</Card.Title>
+          <Card.Title onClick={(e) => ProductCategory(obj.data().itemid)} >{obj.data().category}</Card.Title>
         </Card.Body>
       </Card>
       </div>
