@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import styles from '../../styles/store.module.css'
 import { selectResturant } from '../features/ResSlice';
 import { useRouter } from 'next/router';
@@ -10,8 +10,8 @@ import Card from 'react-bootstrap/Card';
 import ReactStars from 'react-stars'
 function ProductSale({obj}) {
     console.log(obj); 
-    const router = useRouter();
     const  dispatch = useDispatch();
+    const router = useRouter();
     const openResturant=()=>{
         let payload = obj
          dispatch(selectResturant(payload));
@@ -50,22 +50,22 @@ console.log(obj)
 //     <button onClick={openResturant}>See More</button>
 // </div>
     <>
-      <div className='col' id={styles.imgsizelip}>
-        <Card style={{ width: '18rem', marginTop: '1rem' }}>
-          <Card.Img className={styles.imgsizelip} variant="top" src={obj.data().image} />
-          <Card.Body>
-            <Card.Title>{obj.data().category}</Card.Title>
-            <ReactStars
-              count={5}
-              size={24}
-              value={obj.data().totalRating}
-              color2={'#ffd700'} />
-            <div className={styles.spaciz}>
-              <Button onClick={addItemsToBasket} className={styles.btzxp} variant="primary">Add to cart</Button>
-              <Button onClick={openResturant} className={styles.btzxp} variant="primary">View item</Button>
-            </div>
-          </Card.Body>
-        </Card>
+<div className='col' id={styles.imgsizelip}>
+      <Card style={{ width: '18rem', marginTop: '1rem' }}>
+        <Card.Img className={styles.imgsizelip} variant="top" src={obj.data().image} />
+        <Card.Body>
+          <Card.Title>{obj.data().category}</Card.Title>
+          <ReactStars
+                                count={5}
+                                size={24}
+                                value={obj.data().totalRating}
+                                color2={'#ffd700'} />
+                                <div className={styles.spaciz}>
+                                <Button onClick={addItemsToBasket} className={styles.btzxp} variant="primary">Add to cart</Button>
+                                <Button  onClick={openResturant} className={styles.btzxp} variant="primary">View item</Button>
+                                </div>
+        </Card.Body>
+      </Card>
       </div>
     </>      
 

@@ -67,6 +67,7 @@ function DashboardProductAddForm() {
               height: height,
               category: category,
               categoryId : categoryId,
+              totalRating : 0,
               remail: "ghayas110@gmail.com",
               time: serverTimestamp(),
           })

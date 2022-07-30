@@ -18,17 +18,46 @@ import Link from 'next/link'
 import ReactStars from 'react-stars'
 import HeaderStore from '../components/component/HeaderStore';
 import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 import { useRouter } from 'next/router';
 
-import Card from 'react-bootstrap/Card';
-function Store() {
+
+function ProductList() {
+    
+    const router = useRouter()
+    const { openCat,ProductCategory } = router.query;
     const items = useSelector(selectItems);
     const [product, setProduct] = useState([]);
     const [category, setCategory] = useState([]);
+    const { categorys } = router.query
+
+    // const getProductList = () => {
 
 
+    //  onSnapshot(
 
+    //         query(collection(db, "addProduct")), (snapshot) => {
+    //            setCategoryId(snapshot.docs,"tt")
+                
 
+    //     })
+    // };
+    // console.log(product)
+    // const renderProduct = () => {
+    //     if (categoryId && categoryId?.length) {
+    //         // setTimeData(job.map(item=>item.data().timestamp))
+    //         // console.log('state', timeData)
+    //         return categoryId.map((item, index) => {
+    //             // eslint-disable-next-line react/jsx-key
+    //             console.log(new Date(item.data().timestamp.seconds).toLocaleDateString(), "Date")
+    //             return <ProductSale
+    //                 obj={item}
+    //             />
+    //         })
+    //     }
+    // };
+
+  
 
     const objArr =
         [
@@ -202,7 +231,6 @@ function Store() {
 
         
         getProduct()
-        getCategory()
 
     }, [])
 
@@ -211,7 +239,6 @@ function Store() {
         return product.map((item, index) => {
             // eslint-disable-next-line react/jsx-key
             return <ProductSale 
-       
                 obj={item}
             />
 
@@ -224,30 +251,27 @@ function Store() {
             return <CategorySale 
                 obj={item}
             />
-        })
 
+        })
     }
     const getProduct = () => {
 
 
         onSnapshot(
-            query(collection(db, "addProduct")), (snapshot) => {
+            query(collection(db, "addProduct"), where('category','==',categorys)), (snapshot) => {
                 setProduct(snapshot.docs)
-         
-
+                console.log(snapshot.docs);
             })
     };
     const getCategory = () => {
 
 
         onSnapshot(
-            query(collection(db, "ProductCat")), (snapshot) => {
+            query(collection(db, "ProductCat"), where("category", "==","Arts & Crafts")), (snapshot) => {
                 setCategory(snapshot.docs)
-              
+                console.log(snapshot.docs);
             })
     };
-
-
 
     return (
         <div className={styles.body}>
@@ -341,8 +365,7 @@ function Store() {
                 <div className="col-lg-12 col-md-12 col-sm-12 mt-5" id={styles.Mall}>
                     <h5>CATEGORY</h5>
                     <div className="row">
-                      {renderCategorySale()}
-                        {/*Add Conts*/}
+                        {renderCategorySale()}
                     </div>
                 </div>
             </div>
@@ -534,4 +557,4 @@ function Store() {
     )
 }
 
-export default Store;
+export default ProductList;
