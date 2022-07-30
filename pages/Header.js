@@ -14,7 +14,7 @@ export default function Header() {
                 </div>
                 <div className='col 6' >
                     <div id={styles.header_rightside}>
-                            <span id={styles.header_rightside_text}><a href=""> <FontAwesomeIcon icon={faCartShopping} /><span>2</span> &nbsp;&nbsp; | account</a></span>
+                            <span id={styles.header_rightside_text}><a href=""> <FontAwesomeIcon icon={faCartShopping} /><span></span> &nbsp;&nbsp; | account</a></span>
                     </div>
                 </div>
             </div>

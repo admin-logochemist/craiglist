@@ -54,11 +54,11 @@ console.log(obj)
         <Card style={{ width: '18rem', marginTop: '1rem' }}>
           <Card.Img className={styles.imgsizelip} variant="top" src={obj.data().image} />
           <Card.Body>
-            <Card.Title>{obj.data().title}</Card.Title>
+            <Card.Title>{obj.data().category}</Card.Title>
             <ReactStars
               count={5}
               size={24}
-              value={5}
+              value={obj.data().totalRating}
               color2={'#ffd700'} />
             <div className={styles.spaciz}>
               <Button onClick={addItemsToBasket} className={styles.btzxp} variant="primary">Add to cart</Button>
@@ -70,6 +70,6 @@ console.log(obj)
     </>      
 
   )
-}
+  }
 
 export default ProductSale;

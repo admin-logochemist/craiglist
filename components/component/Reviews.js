@@ -6,19 +6,46 @@ import { useDispatch } from 'react-redux';
 import { addToBasket } from '../features/BasketSlice';
 import ReactStars from 'react-stars' 
 import Router from 'next/router';
-function Rwviews({obj}) {
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+function Reviews({obj}) {
     
   return (
-<div>
-<h1>{obj.data().usersName}</h1>
-<h1>{obj.data().review}</h1>
-<ReactStars
-count={5}
-size={24}
-value={obj.data().ratings}
-color2={'#ffd700'} />
-</div>
+
+<>
+<Card className={styles.cardsz}>
+<Card.Body>
+  <Card.Title>{obj.data().usersName}</Card.Title>
+  <ReactStars
+  count={5}
+  size={24}
+  value={obj.data().ratings}
+  color2={'#ffd700'} />
+  <Card.Text>
+  {obj.data().review}
+  </Card.Text>
+</Card.Body>
+</Card>
+</>
+
   )
 }
 
-export default Rwviews
+export default Reviews;
+
+
+
+
+// <div className='col'  id={styles.revis} >
+// <h5>{obj.data().usersName}</h5>
+// </div>
+// <div className='col'>
+// <ReactStars
+// count={5}
+// size={24}
+// value={obj.data().ratings}
+// color2={'#ffd700'} />
+// </div>
+// <div className='col' >
+// <p>{obj.data().review}</p>
+// </div>

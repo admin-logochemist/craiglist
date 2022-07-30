@@ -2,26 +2,21 @@ import React from 'react'
 import styles from '../../styles/Products.module.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import { StarRate, ShareSharp, Favorite } from '@material-ui/icons'
-
-const ProductDetail = ({title,category,price,description}) => {
+import ReactStars from 'react-stars' 
+const ProductDetail = ({title,category,price,description,ratings}) => {
     return (
         <>
+      
             <div>
                 <span className={styles.HeadingProduct}>{title}</span>
             </div>
 
             <div className={styles.IconSec}>
-                <span>
-                    <StarRate className={styles.IconRate} />
-                    <StarRate className={styles.IconRate} />
-                    <StarRate className={styles.IconRate} />
-                    <StarRate className={styles.IconRate} />
-                    <StarRate className={styles.IconRate} />
-                </span>
-                <span>
-                    <ShareSharp className={styles.IconShare} />
-                    <Favorite className={styles.IconFavrite} />
-                </span>
+            <ReactStars
+            count={5}
+            size={24}
+            value={ratings}
+            color2={'#ffd700'} />
             </div>
 
             <div>
@@ -30,7 +25,7 @@ const ProductDetail = ({title,category,price,description}) => {
 
             <div className={styles.Rate}>
                 <h2 className={styles.price}>${price}</h2>
-                <span><s>%40 off</s></span>
+              
             </div>
 
             <div className={styles.ProductDetailImgdiv}>

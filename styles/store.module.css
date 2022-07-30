@@ -547,3 +547,16 @@ justify-content: center;
 .btzxp{
     width: 40%;
 }
+#revis{
+    /* border: solid 2px rgb(88, 88, 88); */
+    margin-top: 20px;
+    padding: 2px;
+    /* background-color: #ffffff; */
+    /* box-shadow: 5px 5px 10px 5px rgb(63, 62, 62); */
+}
+
+.cardsz{
+    width: 28rem;
+    padding: 20px;
+    margin: 12px;
+}
