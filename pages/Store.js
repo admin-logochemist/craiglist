@@ -214,7 +214,6 @@ function Store() {
             return <CategorySale 
                 obj={item}
             />
-
         })
     }
     const getProduct = () => {

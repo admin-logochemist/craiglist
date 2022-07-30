@@ -75,7 +75,6 @@ useEffect(() => {
                 <Header />
                 <HeaderStore />
                 <div className="container" id={styles.Products}>
-
                     <div className="row">
 
                         <div className="col-lg-1">
@@ -112,7 +111,6 @@ useEffect(() => {
                         <div className="col-lg-1"></div>
                     </div>
                     <div className="row" id={styles.ReviewsRow}>
-
                     <div className="col-lg-1">
                     </div>
                     <div className="col-lg-10" id={styles.ProductsDetails}>
@@ -128,7 +126,6 @@ useEffect(() => {
                                 onChange={(e) => setRating(e)}
                                 color2={'#ffd700'} />
                             <textarea id="w3review" name="w3review" rows="3" cols="45" value={review} onChange={(e)=>setReview(e.target.value)}> ss </textarea>
-
                             <button className={styles.re_btn} onClick={handleSubmit}>Write a Review</button>
                         </div>
                         {renderReviews()}

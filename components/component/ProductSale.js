@@ -50,26 +50,26 @@ console.log(obj)
 //     <button onClick={openResturant}>See More</button>
 // </div>
     <>
-<div className='col' id={styles.imgsizelip}>
-      <Card style={{ width: '18rem', marginTop: '1rem' }}>
-        <Card.Img className={styles.imgsizelip} variant="top" src={obj.data().image} />
-        <Card.Body>
-          <Card.Title>{obj.data().category}</Card.Title>
-          <ReactStars
-                                count={5}
-                                size={24}
-                                value={5}
-                                color2={'#ffd700'} />
-                                <div className={styles.spaciz}>
-                                <Button onClick={addItemsToBasket} className={styles.btzxp} variant="primary">Add to cart</Button>
-                                <Button onClick={openResturant} className={styles.btzxp} variant="primary">View item</Button>
-                                </div>
-        </Card.Body>
-      </Card>
+      <div className='col' id={styles.imgsizelip}>
+        <Card style={{ width: '18rem', marginTop: '1rem' }}>
+          <Card.Img className={styles.imgsizelip} variant="top" src={obj.data().image} />
+          <Card.Body>
+            <Card.Title>{obj.data().title}</Card.Title>
+            <ReactStars
+              count={5}
+              size={24}
+              value={5}
+              color2={'#ffd700'} />
+            <div className={styles.spaciz}>
+              <Button onClick={addItemsToBasket} className={styles.btzxp} variant="primary">Add to cart</Button>
+              <Button onClick={openResturant} className={styles.btzxp} variant="primary">View item</Button>
+            </div>
+          </Card.Body>
+        </Card>
       </div>
     </>      
 
   )
 }
 
-export default ProductSale
+export default ProductSale;
