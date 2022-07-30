@@ -58,7 +58,7 @@ console.log(obj)
           <ReactStars
                                 count={5}
                                 size={24}
-                                value={5}
+                                value={obj.data().totalRating}
                                 color2={'#ffd700'} />
                                 <div className={styles.spaciz}>
                                 <Button onClick={addItemsToBasket} className={styles.btzxp} variant="primary">Add to cart</Button>
