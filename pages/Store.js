@@ -226,6 +226,7 @@ function Store() {
             />
 
         })
+
     }
     const getProduct = () => {
 
@@ -233,7 +234,8 @@ function Store() {
         onSnapshot(
             query(collection(db, "addProduct")), (snapshot) => {
                 setProduct(snapshot.docs)
-                console.log(snapshot.docs);
+         
+
             })
     };
     const getCategory = () => {
@@ -242,7 +244,7 @@ function Store() {
         onSnapshot(
             query(collection(db, "ProductCat")), (snapshot) => {
                 setCategory(snapshot.docs)
-                console.log(snapshot.docs);
+              
             })
     };
 

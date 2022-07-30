@@ -23,13 +23,13 @@ import { useRouter } from 'next/router';
 
 
 function ProductList() {
-
+    
     const router = useRouter()
     const { openCat,ProductCategory } = router.query;
     const items = useSelector(selectItems);
     const [product, setProduct] = useState([]);
     const [category, setCategory] = useState([]);
-
+    const { categorys } = router.query
 
     // const getProductList = () => {
 
@@ -258,7 +258,7 @@ function ProductList() {
 
 
         onSnapshot(
-            query(collection(db, "addProduct")), (snapshot) => {
+            query(collection(db, "addProduct"), where('category','==',categorys)), (snapshot) => {
                 setProduct(snapshot.docs)
                 console.log(snapshot.docs);
             })

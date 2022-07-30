@@ -11,7 +11,7 @@ import ReactStars from 'react-stars'
 function ProductSale({obj}) {
     console.log(obj); 
     const  dispatch = useDispatch();
-
+    const router = useRouter();
     const openResturant=()=>{
         let payload = obj
          dispatch(selectResturant(payload));

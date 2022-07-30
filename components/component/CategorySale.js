@@ -13,18 +13,15 @@ function CategorySale({obj}) {
     console.log(obj); 
     const router = useRouter();
     const  dispatch = useDispatch();
-    const [category, setCategory] = useState();
+    const [categorys, setCategory] = useState();
 
     const ProductCategory = (e) => { 
       // setSubcat(e.target.id)
+      setCategory(obj.data().category)
       // console.log(e.target.id)
-      router.push({ pathname: '/ProductList', query: {  ProductCategory: e} })
+      router.push({ pathname: '/ProductList', query: {categorys: obj.data().category} })
     }
 
-
-    const handleCapacity=(e)=>{
-      setCategory(e.target.value);
-    }
 
 
 
@@ -70,12 +67,12 @@ console.log(obj)
 // </div>
     <>
 <div className='col' id={styles.imgsizelip}>
-      <Card style={{ width: '18rem', marginTop: '1rem', cursor:'pointer' }}
-      
+      <Card style={{ width: '18rem', marginTop: '1rem', cursor:'pointer'  } }
+     onClick={ProductCategory}
       >
-        <Card.Img className={styles.imgsizelip} variant="top" src={obj.data().image} />
+        <Card.Img className={styles.imgsizelip} variant="top" src={obj.data().image}  />
         <Card.Body>
-          <Card.Title onClick={(e) => ProductCategory(obj.data().itemid)} >{obj.data().category}</Card.Title>
+          <Card.Title >{obj.data().category}</Card.Title>
         </Card.Body>
       </Card>
       </div>
