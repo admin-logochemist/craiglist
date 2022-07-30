@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 import { addToBasket } from '../features/BasketSlice';
 import ReactStars from 'react-stars' 
 import Router from 'next/router';
-function Rwviews({obj}) {
+function Reviews({obj}) {
     
   return (
 <div>
@@ -21,4 +21,4 @@ color2={'#ffd700'} />
   )
 }
 
-export default Rwviews
+export default Reviews

@@ -20,6 +20,8 @@ const Products = () => {
     const [rating, setRating] = useState(0);
     const [resReviews, setResReviews] = useState();
     const [userData, setUserData] = useState([])
+    const [updateFlag, setUpdateFlag] = useState(false)
+    const [tRating,setTRating]= useState(0)
 const datas=[]
 
 const getReviews = () => {
@@ -28,15 +30,20 @@ const getReviews = () => {
     onSnapshot(
         query(collection(db, "review"), where("id","==", selectResturant.id)), (snapshot) => {
             setProduct(snapshot.docs)
-            console.log(snapshot.docs);
+        
         })
-};
+}
+
 useEffect(() => {
     getReviews()
     const users = localStorage.getItem('displayName')
     console.log(users,"local storage")
     setUsersName(((users!==null)&&(users!==undefined)) ? users : "Login")
 }, [])
+
+useEffect(() => {
+    addReviews()
+}, [product])
     const handleSubmit = async (e) => {
        
         try {
@@ -49,12 +56,30 @@ useEffect(() => {
 
           })
        
+        
+        
         alert("Review submited")
         } catch (err) {
           alert(err)
         }
+        
+        
     }
+    const addReviews = () => {
 
+        const totalRating=selectResturant?.data()?.totalRating
+        const total=totalRating+rating
+        const ratings= product.length
+        const totalRat=total/ratings
+        const reviewsRef = doc(db, "addProduct", selectResturant.id);
+        // Set the "capital" field of the city 'DC'
+        updateDoc(reviewsRef, {
+            totalRating:totalRat
+            // address: fdata.address,
+        });
+      //   setTRating(totalRat)
+        setUpdateFlag(!updateFlag)
+    }
     const renderReviews = () => {
 
         return product.map((item, index) => {
@@ -62,11 +87,16 @@ useEffect(() => {
             return <Reviews
                 obj={item}
             />
-
+         
         })
     }
 
+    product && console.log(product.length)
     const selectResturant = useSelector(selectOpenResturant)
+    console.log(selectResturant?.data()?.totalRating,"Ghayasd")
+ 
+
+ 
     return (
 
 
@@ -84,6 +114,7 @@ useEffect(() => {
                         <div className="col-lg-10" id={styles.ProductsDetails}>
                             <div className="row" >
                                 <div className="col-lg-3">
+                              
                                 <ReactImageMagnify {...{
                                     smallImage: {
                                         alt: 'Wristwatch by Ted Baker London',
@@ -104,7 +135,9 @@ useEffect(() => {
                                 
                                 </div>
                                 <div className="col-lg-6" id={styles.detailsSection}>
-                                    <ProductDetail title={selectResturant?.data().title} description={selectResturant?.data().description} category={selectResturant?.data().category} price={selectResturant?.data().price}/>
+                           
+                                {console.log("danny",selectResturant?.data().totalRating)}
+                                    <ProductDetail title={selectResturant?.data().title} description={selectResturant?.data().description} category={selectResturant?.data().category} price={selectResturant?.data().price} ratings={selectResturant?.data().totalRating}/>
                                 </div>
                                 <div className="col-lg-3"></div>
                             </div>
